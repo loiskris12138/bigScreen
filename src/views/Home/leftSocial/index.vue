@@ -8,8 +8,8 @@
       <div class="infoSumArea">
         <div v-for="(item, index) in infoSumList" :key="index" class="infoItem">
           <div class="infoItemImg">
-            <img class="bgImg" :src="item.bgImgUrl" alt="">
-            <img class="contentImg" :src="item.contentImgUrl" alt="">
+            <img class="bgImg" :src="item.bgImgUrl" alt="" />
+            <img class="contentImg" :src="item.contentImgUrl" alt="" />
           </div>
           <div class="infoContent">
             <p class="infoName">{{ item.name }}</p>
@@ -21,6 +21,11 @@
       </div>
       <div class="newsArea">
         <div v-for="(item, index) in newsList" :key="index" class="newItem">
+          <a
+            href="https://www.ecnu.edu.cn/info/1095/58504.htm"
+            class="newshref"
+          >
+          </a>
           <p class="info">
             <span class="count">{{ item.count }}</span>
             <span class="title">{{ item.title }}</span>
@@ -32,27 +37,28 @@
   </div>
 </template>
 <script>
-import { newsList, infoSumList } from '../data'
+import { newsList, infoSumList } from "../data";
 // import circleSwiper from './circleSwiper.vue'
 export default {
-  name: 'LeftSocial',
+  name: "LeftSocial",
   components: {
     // circleSwiper
-
   },
   data() {
     return {
       newsList: newsList,
-      infoSumList: infoSumList
-    }
-  }
-}
+      infoSumList: infoSumList,
+    };
+  },
+};
 </script>
 <style lang="scss" scoped>
 .leftSocialArea {
   width: 474px;
   height: 444px;
   background: #223958;
+  margin-bottom: 20px;
+  margin-right: 20px;
 
   border-radius: 12px;
   .leftSocialContent {
@@ -106,7 +112,15 @@ export default {
       }
     }
     .newsArea {
+      .newshref {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
       .newItem {
+        position: relative;
+
         width: 421px;
         height: 22px;
         box-sizing: border-box;

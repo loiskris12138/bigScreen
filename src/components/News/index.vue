@@ -2,34 +2,38 @@
   <div class="news">
     <div class="up-block">
       <ul>
-        <li v-for="i in [1, 2, 3]" :key="i">
-          <div class="content">
-            <img src="@/assets/img/newimg.jpg" alt="" />
-            <div class="desc">
-              <div class="desc-up">
-                <span class="title">《800架无人机编队飞行在苍穹之下》</span>
-                <span class="read-times">阅读数118.9w</span>
+        <li v-for="i in upList" :key="i.id">
+          <a href="https://www.ecnu.edu.cn/info/1095/58504.htm">
+            <div class="content">
+              <img src="@/assets/img/newimg.jpg" alt="" />
+              <div class="desc">
+                <div class="desc-up">
+                  <span class="title">{{ i.title }}</span>
+                  <span class="read-times">阅读数{{ i.readingcount }}</span>
+                </div>
+                <p class="date">{{ i.date }}</p>
               </div>
-              <p class="date">2021年03月9日</p>
             </div>
-          </div>
+          </a>
           <div class="line" v-if="i !== 3"></div>
         </li>
       </ul>
     </div>
     <div class="down-block">
       <ul>
-        <li v-for="i in [1, 2, 3]" :key="i">
-          <div class="content">
-            <img src="@/assets/img/newimg.jpg" alt="" />
-            <div class="desc">
-              <div class="desc-up">
-                <span class="title">《800架无人机编队飞行在苍穹之下》</span>
-                <span class="read-times">阅读数118.9w</span>
+        <li v-for="i in downList" :key="i.id">
+          <a href="https://www.ecnu.edu.cn/info/1095/58504.htm">
+            <div class="content">
+              <img src="@/assets/img/newimg.jpg" alt="" />
+              <div class="desc">
+                <div class="desc-up">
+                  <span class="title">《800架无人机编队飞行在苍穹之下》</span>
+                  <span class="read-times">阅读数118.9w</span>
+                </div>
+                <p class="date">2021年03月9日</p>
               </div>
-              <p class="date">2021年03月9日</p>
             </div>
-          </div>
+          </a>
           <div class="line" v-if="i !== 3"></div>
         </li>
       </ul>
@@ -38,13 +42,21 @@
 </template>
 
 <script>
-export default {};
+import { upList, downList } from "./constant";
+export default {
+  data() {
+    return {
+      upList,
+      downList,
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 .news {
   width: 497px;
-  // height: 541px;÷
+  height: 541px;
   background: #223958;
   border-radius: 12px;
   padding: 25px;
@@ -57,20 +69,31 @@ export default {};
     width: 451px;
     background: linear-gradient(to right, #3a4760, #293d5a);
   }
+
   .content {
+    height: 74px;
     display: flex;
     justify-content: left;
     align-items: center;
     padding: 10px;
+    cursor: pointer;
+
     .desc {
+      width: 320px;
       font-family: Microsoft YaHei;
       margin-left: 18px;
       font-weight: 400;
+      height: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      // align-items:;
+
       .desc-up {
         font-size: 14px;
         color: #ffffff;
         line-height: 20px;
-        margin-bottom: 28px;
+        // margin-bottom: 20px;÷
       }
       .date {
         font-size: 12px;
