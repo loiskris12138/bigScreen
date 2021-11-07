@@ -1,22 +1,22 @@
 <template>
-  <div class="bigScreen"><leftSocial /><pratice /><socialVideo /><ownProduct /></div>
+  <div class="bigScreen">
+    <leftSocial /><pratice /><socialVideo /><ownProduct />
+  </div>
 </template>
 <script>
-import socialVideo from './socialVideo/index.vue'
-import leftSocial from './leftSocial/index.vue'
-import ownProduct from './ownProduct/index.vue'
-import pratice from './practice'
+import socialVideo from "./socialVideo/index.vue";
+import leftSocial from "./leftSocial/index.vue";
+import ownProduct from "./ownProduct/index.vue";
+import pratice from "./practice";
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     socialVideo,
     leftSocial,
     ownProduct,
-    pratice
+    pratice,
   },
-  computed: {}
-}
+  computed: {},
+};
 </script>
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
