@@ -1,23 +1,24 @@
 <template>
   <div class="media-attention">
-    <div class="title"></div>
+    <div class="commonHeadLine">媒体关注</div>
+
     <div class="content">
       <div class="charts">
         <pie-chart />
         <div class="legend">
-          <li class="local media"><span class="circle"></span> 本地媒体</li>
-          <li class="cctv media"><span class="circle"></span> 央视媒体</li>
+          <li class="local media"><span class="circle" /> 本地媒体</li>
+          <li class="cctv media"><span class="circle" /> 央视媒体</li>
         </div>
         <pie-chart />
       </div>
       <div class="center-tags">
         <ul class="left">
-          <li class="tag" v-for="i in rightTag" :key="i">
+          <li v-for="i in rightTag" :key="i" class="tag">
             <span>{{ i }}</span>
           </li>
         </ul>
         <ul class="right">
-          <li class="tag" v-for="i in rightTag" :key="i">
+          <li v-for="i in rightTag" :key="i" class="tag">
             <span>{{ i }}</span>
           </li>
         </ul>
@@ -56,10 +57,11 @@ export default {
 <style lang="scss" scoped>
 .media-attention {
   width: 655px;
-  //   height: 541px;
+  height: 541px;
   background: #223958;
   border-radius: 12px;
   padding: 20px;
+  margin-right: 20px;
   .title {
     width: 300px;
     height: 50px;
@@ -130,7 +132,6 @@ export default {
     }
   }
   .bottom-news-brand {
-    min-height: 200px;
     background: url("../../assets/img/mediabg.png") 50% 50% no-repeat;
     display: flex;
     justify-content: space-between;

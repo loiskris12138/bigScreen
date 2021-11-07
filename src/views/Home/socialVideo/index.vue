@@ -23,26 +23,27 @@
   </div>
 </template>
 <script>
-import trendEchart from './trendEchart'
-import friendsCircle from './friendsCircle.vue'
-import mediaArea from './mediaArea.vue'
-import { trendChartList } from '../data'
+import trendEchart from "./trendEchart";
+import friendsCircle from "./friendsCircle.vue";
+import mediaArea from "./mediaArea.vue";
+import { trendChartList } from "../data";
+
 export default {
-  name: 'SocialVideo',
+  name: "SocialVideo",
   components: {
     trendEchart,
     friendsCircle,
-    mediaArea
+    mediaArea,
   },
   data() {
     return {
-      trendChartList: trendChartList
-    }
+      trendChartList: trendChartList,
+    };
   },
   mounted() {},
   created() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>
 
 <style lang="scss" scoped>
@@ -50,6 +51,7 @@ export default {
   width: 680px;
   height: 734px;
   background: #223958;
+  margin-bottom: 20px;
 
   border-radius: 12px;
   .subTitle {

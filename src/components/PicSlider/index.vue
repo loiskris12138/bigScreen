@@ -3,17 +3,17 @@
     <swiper
       :slides-per-view="3"
       :space-between="0"
+      :options="options"
       @swiper="onSwiper"
       @slideChange="onSlideChange"
-      :options="options"
-      ><swiper-slide>
-        <img class="slide-pic center" src="@/assets/img/imgcenter.jpg" alt="" />
+    ><swiper-slide>
+       <img class="slide-pic center" src="@/assets/img/imgcenter.jpg" alt="">
+     </swiper-slide>
+      <swiper-slide>
+        <img class="slide-pic" src="@/assets/img/img7.jpg" alt="">
       </swiper-slide>
       <swiper-slide>
-        <img class="slide-pic" src="@/assets/img/img7.jpg" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img class="slide-pic" src="@/assets/img/img5.jpg" alt="" />
+        <img class="slide-pic" src="@/assets/img/img5.jpg" alt="">
       </swiper-slide>
 
       <!-- ...÷ -->
@@ -36,36 +36,36 @@ export default {
         centeredSlides: true,
         watchSlidesProgress: true,
         on: {
-          setTranslate: function (swiper, translate) {
-            console.log(swiper, translate);
+          setTranslate: function(swiper, translate) {
+            console.log(swiper, translate)
             // const slides = swiper;
-            console.log(this.slides);
+            console.log(this.slides)
             for (let i = 0; i < this.slides.length; i++) {
-              const slide = this.slides.eq(i);
-              const progress = this.slides[i].progress;
-              slide.transform("");
+              const slide = this.slides.eq(i)
+              const progress = this.slides[i].progress
+              slide.transform('')
               // console.log(, "i");
-              const findClass = slide[0].className.indexOf("swiper-active");
+              const findClass = slide[0].className.indexOf('swiper-active')
               if (findClass !== -1) {
-                slide[0].className = slide[0].className.substring(0, findClass);
+                slide[0].className = slide[0].className.substring(0, findClass)
               }
               if (i === swiper.visibleSlidesIndexes[1]) {
-                slide.transform("scale(1)");
-                slide[0].className = slide[0].className + " swiper-active";
+                slide.transform('scale(1)')
+                slide[0].className = slide[0].className + ' swiper-active'
               } else if (i === swiper.visibleSlidesIndexes[0]) {
                 slide.transform(
-                  "scale(" +
+                  'scale(' +
                     (1 - Math.abs(progress) / 5) +
-                    ") translate(130px,20px) rotateZ(-7deg)"
-                );
+                    ') translate(130px,20px) rotateZ(-7deg)'
+                )
               } else if (i === swiper.visibleSlidesIndexes[2]) {
                 slide.transform(
-                  "scale(" +
+                  'scale(' +
                     (1 - Math.abs(progress) / 5) +
-                    ") translate(-130px,20px) rotateZ(7deg)"
-                );
+                    ') translate(-130px,20px) rotateZ(7deg)'
+                )
               } else {
-                slide.transform("scale(0)");
+                slide.transform('scale(0)')
               }
               // if (
               //   slide[0].className.includes("swiper-slide-prev") ||
@@ -81,31 +81,31 @@ export default {
               // ÷
             }
           },
-          setTransition: function (swiper, transition) {
+          setTransition: function(swiper, transition) {
             for (var i = 0; i < this.slides.length; i++) {
-              var slide = this.slides.eq(i);
-              slide.transition(transition);
+              var slide = this.slides.eq(i)
+              slide.transition(transition)
             }
-          },
+          }
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
         },
         pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      },
-    };
+          el: '.swiper-pagination',
+          clickable: true
+        }
+      }
+    }
   },
   methods: {
     onSwiper(swiper) {
-      console.log(swiper);
+      console.log(swiper)
     },
     onSlideChange(e) {
-      console.log(e, "slide change");
-    },
+      console.log(e, 'slide change')
+    }
     // prev() {
     //   console.log(this.swiper);
     //   // this.swiper.s÷lidePrev();
@@ -113,8 +113,8 @@ export default {
     // next() {
     //   // this.swiper.slideNext();
     // },
-  },
-};
+  }
+}
 </script>
 
 <style lang="scss">

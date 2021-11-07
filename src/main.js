@@ -1,5 +1,4 @@
 import Vue from 'vue'
-
 import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 import '@/styles/reset.scss'
 import ElementUI from 'element-ui'
@@ -16,7 +15,6 @@ import '@/icons' // icon
 import '@/permission' // permission control
 import VueAwesomeSwiper from 'vue-awesome-swiper'// Import Swiper styles
 import 'swiper/swiper-bundle.css'
-
 
 /**
  * If you don't want to use mock-server
