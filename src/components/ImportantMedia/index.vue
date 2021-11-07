@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import PicSiider from "../PicSiider";
+import PicSlider from "../PicSlider";
 export default {
   components: {
-    PicSiider,
+    PicSlider,
   },
 };
 </script>

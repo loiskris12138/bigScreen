@@ -15,7 +15,7 @@ import router from './router'
 import '@/icons' // icon
 import '@/permission' // permission control
 import VueAwesomeSwiper from 'vue-awesome-swiper'// Import Swiper styles
-import "swiper/css";
+import 'swiper/swiper-bundle.css'
 
 
 /**
