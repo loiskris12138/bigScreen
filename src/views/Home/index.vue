@@ -19,4 +19,15 @@ export default {
   computed: {},
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.bigScreen {
+  background: red;
+  width: 100px;
+  height: 100px;
+}
+.right {
+  display: flex;
+  justify-content: left;
+  // align-items: ce÷nter;
+}
+</style>
