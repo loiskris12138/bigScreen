@@ -5,18 +5,17 @@
 </template>
 
 <script>
-import { createComponent } from "echarts-for-vue";
-import * as echarts from "echarts";
-import { h } from "vue";
-import { settingOption } from "./option";
+import { createComponent } from 'echarts-for-vue'
+import * as echarts from 'echarts'
+import { settingOption } from './option'
 export default {
   components: {
-    ECharts: createComponent({ echarts, h }),
+    ECharts: createComponent({ echarts })
   },
   data: () => ({
-    option: settingOption("关注媒体"),
-  }),
-};
+    option: settingOption('关注媒体')
+  })
+}
 </script>
 
 <style lang="scss" scoped>

@@ -1,56 +1,56 @@
 <template>
   <div class="media-attention">
-    <div class="title"></div>
+    <div class="title" />
     <div class="content">
       <div class="charts">
         <pie-chart />
         <div class="legend">
-          <li class="local media"><span class="circle"></span> 本地媒体</li>
-          <li class="cctv media"><span class="circle"></span> 央视媒体</li>
+          <li class="local media"><span class="circle" /> 本地媒体</li>
+          <li class="cctv media"><span class="circle" /> 央视媒体</li>
         </div>
         <pie-chart />
       </div>
       <div class="center-tags">
         <ul class="left">
-          <li class="tag" v-for="i in rightTag" :key="i">
+          <li v-for="i in rightTag" :key="i" class="tag">
             <span>{{ i }}</span>
           </li>
         </ul>
         <ul class="right">
-          <li class="tag" v-for="i in rightTag" :key="i">
+          <li v-for="i in rightTag" :key="i" class="tag">
             <span>{{ i }}</span>
           </li>
         </ul>
       </div>
       <div class="bottom-news-brand">
-        <li><img src="@/assets/img/news4.png" alt="" /></li>
-        <li><img src="@/assets/img/news3.png" alt="" /></li>
-        <li><img src="@/assets/img/renmin.png" alt="" /></li>
-        <li><img src="@/assets/img/news1.png" alt="" /></li>
-        <li><img src="@/assets/img/news2.png" alt="" /></li>
+        <li><img src="@/assets/img/news4.png" alt=""></li>
+        <li><img src="@/assets/img/news3.png" alt=""></li>
+        <li><img src="@/assets/img/renmin.png" alt=""></li>
+        <li><img src="@/assets/img/news1.png" alt=""></li>
+        <li><img src="@/assets/img/news2.png" alt=""></li>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Title from "@/components/common/Title.vue";
-import PieChart from "./PieChart.vue";
-import { leftTag, rightTag } from "./constant";
+import Title from '@/components/common/Title.vue'
+import PieChart from './PieChart.vue'
+import { leftTag, rightTag } from './constant'
 export default {
   components: {
     Title,
-    PieChart,
+    PieChart
   },
   data: () => {
     return {
       leftTag,
-      rightTag,
-    };
+      rightTag
+    }
   },
 
-  created: () => {},
-};
+  created: () => {}
+}
 </script>
 
 <style lang="scss" scoped>
