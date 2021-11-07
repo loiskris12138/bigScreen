@@ -2,7 +2,9 @@
   <div class="leftSocialArea">
     <div class="commonHeadLine">国内社交音频视频号</div>
     <div class="leftSocialContent">
-      <div class="carouselArea" />
+      <div class="carouselArea">
+        <!-- <circleSwiper /> -->
+      </div>
       <div class="infoSumArea">
         <div v-for="(item, index) in infoSumList" :key="index" class="infoItem">
           <div class="infoItemImg">
@@ -31,8 +33,13 @@
 </template>
 <script>
 import { newsList, infoSumList } from '../data'
+// import circleSwiper from './circleSwiper.vue'
 export default {
   name: 'LeftSocial',
+  components: {
+    // circleSwiper
+
+  },
   data() {
     return {
       newsList: newsList,

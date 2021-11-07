@@ -27,6 +27,7 @@ import trendEchart from './trendEchart'
 import friendsCircle from './friendsCircle.vue'
 import mediaArea from './mediaArea.vue'
 import { trendChartList } from '../data'
+
 export default {
   name: 'SocialVideo',
   components: {
