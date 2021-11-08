@@ -2,23 +2,25 @@
   <div class="important-media">
     <div class="title">
       <h3>重点媒体报导</h3>
-      <pic-slider />
+      <div class="slider-container">
+        <pic-slider />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import PicSlider from '../PicSlider'
+import PicSlider from "../PicSlider";
 export default {
   components: {
-    PicSlider
-  }
-}
+    PicSlider,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 .important-media {
-  width: 1172px;
+  width: 1247px;
   height: 441px;
   background: #223958;
   border-radius: 12px;
@@ -32,5 +34,8 @@ export default {
     color: #ffffff;
     line-height: 38px;
   }
+}
+.slider-container {
+  // background: url('@/assets/');
 }
 </style>
