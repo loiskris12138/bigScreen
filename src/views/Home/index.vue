@@ -1,6 +1,7 @@
 <template>
   <div class="bigScreen">
-    <Swiper />
+    <!-- <Swiper /> -->
+    <PicSlider />
     <!-- <div class="header">
       <span class="bigScreen-title">华东师范大学融媒体中心</span>
     </div>
@@ -26,6 +27,7 @@
         <important-media />
       </div>
     </div> -->
+
   </div>
 </template>
 <script>
@@ -38,10 +40,12 @@
 // import ImportantMedia from '@/components/ImportantMedia'
 // import countTo from 'vue-count-to'
 import { sumList } from './data'
+import PicSlider from '@/components/PicSlider'
 import Swiper from './leftSocial/swiper.vue'
 export default {
   name: 'Home',
   components: {
+    PicSlider
     // socialVideo,
     // leftSocial,
     // ownProduct,
@@ -51,7 +55,7 @@ export default {
     // ImportantMedia,
     // countTo
     // Modal
-    Swiper
+    // Swiper
   },
   data() {
     return {
