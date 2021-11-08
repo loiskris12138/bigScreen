@@ -1,99 +1,75 @@
 <template>
-  <div>
-    <el-carousel ref="slider" :autoplay="false" type="card" height="200px" @canplay="canPlay" @change="change">
-      <el-carousel-item v-for="item in 3" id="el-slider-right" :key="item">
-        <h3 class="medium">
-          <img src="@/assets/img/imgcenter.jpg" alt="">
-        </h3>
-      </el-carousel-item>
-    </el-carousel>
-    <div class="pic-wrapper">
-      <div class="cube">
-
-        <div class="picture">
-          <img src="@/assets/img/imgcenter.jpg" alt="">
-        </div>
-      </div>
-    </div>
+  <div class="box">
+    <carousel-3d
+      :autoplay="true"
+      :autoplayTimeout="2000"
+      :perspective="35"
+      :display="5"
+      :animationSpeed="1000"
+      controlsVisible
+      :controlsHeight="60"
+      ref="slider"
+      controlsPrevHtml='<span style="position:absolute;top:-30px;color:#338afb;left:30px">‹</span>'
+      controlsNextHtml='<span style="position:absolute;top:-30px;color:#338afb;left:30px;">›</span>'
+    >
+      <slide v-for="(slide, i) in 3" :index="i" :key="i">
+        <!-- <h1>{{ slide.title }}</h1>
+      <p>{{ slide.desc }}</p> -->
+        <img src="@/assets/img/imgcenter.jpg" alt="" />
+      </slide>
+    </carousel-3d>
   </div>
 </template>
 
 <script>
+// ‹
+// ›
+// controlsPrevHtml='<span style="position:absolute;top:-100px;">‹</span>'
 
 export default {
   mounted() {
-    const className = this.$refs.slider.$children[0].$el.className
-    console.log(this.$refs.slider.$children[0].$el.className)
-    // this.$refs.slider.$children[1].$el.style='transform: translateX(915.74px) scale(0.83) rotateZ(30deg);'
-  },
-  beforeUpdate() {
-    console.log('212')
+    console.log(this.$refs.slider);
   },
   methods: {
-    change(params) {
-      console.log(params, 'dsjdl')
-      // console.log(this.$refs.slider.$children);
+    onSlideChange(pa) {
+      console.log(pa);
     },
-    canPlay(a) {
-      console.log(a)
-      console.log('sdfsdfsdf')
-    }
-  }
-}
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-.el-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 200px;
-    margin: 0;
-  }
-
-  .el-carousel__item:nth-child(2n) {
-    background-color: red;
-  }
-  #el-slider-right{
-    // perspective-origin:left center;
-    transform-style:preserve-3d !important;
-    transform-origin:0% 0!important;
-// transform:;
-    transform: translateX(915.74px) scale(0.83) rotateY(60deg) !important;
-    border: 3px solid greenyellow;
-  }
-  .el-carousel__item:nth-child(2n+1) {
-    background-color: blue;
-  }
-  img{
-    width: 100%;
-    height: 100%;
+<style lang='scss' scoped>
+.carousel-3d-slide {
+  width: 588px !important;
+  height: 332px !important;
+  border-radius: 10px;
+  border: 1px solid #73d8d7;
+  img {
     display: block;
+    width: 588px !important;
+    height: 332px !important;
   }
-  .pic-wrapper{
-    perspective: 800px;
-	perspective-origin: 50% 100px;
-  margin-left: 100px;
-  }
-  .cube{
-position: relative;
-	width: 200px;
-	transform-style: preserve-3d;
-  }
-  .picture{
-    position: absolute;
-	width: 200px;
-	height: 200px;
-
-  transform: rotateY(270deg) translateX(-100px);
-	transform-origin: center left;
-
-    .img{
-      display: block;
-      width: 100%;
-      height: 100%;
-
-    }
-  }
-
+}
+.left-1 {
+  // transform: translateX(400px) translateZ(-500px) rotateY(35deg) !important;
+  transform: translateX(-400px) translateZ(-500px) translateY(-20px)
+    rotateY(-25deg) !important;
+}
+.right-1 {
+  transform: translateX(400px) translateZ(-500px) translateY(-20px)
+    rotateY(25deg) !important;
+}
+.carousel-3d-controls {
+  position: absolute !important;
+  top: 33% !important;
+  height: 0 !important;
+  margin-top: -30px !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+}
+.next span,
+.prev span {
+  top: -59px !important;
+}
 </style>

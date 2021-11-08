@@ -24,11 +24,17 @@
         </ul>
       </div>
       <div class="bottom-news-brand">
-        <li><img src="@/assets/img/news4.png" alt=""></li>
-        <li><img src="@/assets/img/news3.png" alt=""></li>
-        <li><img src="@/assets/img/renmin.png" alt=""></li>
-        <li><img src="@/assets/img/news1.png" alt=""></li>
-        <li><img src="@/assets/img/news2.png" alt=""></li>
+        <li><img class="image" src="@/assets/img/news4.png" alt="" /></li>
+        <li><img class="image" src="@/assets/img/news3.png" alt="" /></li>
+        <li>
+          <img
+            class="image image-center"
+            src="@/assets/img/renmin.png"
+            alt=""
+          />
+        </li>
+        <li><img class="image" src="@/assets/img/news1.png" alt="" /></li>
+        <li><img class="image" src="@/assets/img/news2.png" alt="" /></li>
       </div>
     </div>
   </div>
@@ -36,32 +42,42 @@
 
 <script>
 // import Title from '@/components/common/Title.vue'
-import PieChart from './PieChart.vue'
-import { leftTag, rightTag } from './constant'
+import PieChart from "./PieChart.vue";
+import { leftTag, rightTag } from "./constant";
 export default {
   components: {
     // Title,
-    PieChart
+    PieChart,
   },
   data: () => {
     return {
       leftTag,
-      rightTag
-    }
+      rightTag,
+    };
   },
 
-  created: () => {}
-}
+  created: () => {},
+};
 </script>
 
 <style lang="scss" scoped>
 .media-attention {
-  width: 655px;
+  width: 730px;
   height: 541px;
   background: #223958;
   border-radius: 12px;
   padding: 20px;
   margin-right: 20px;
+  .image {
+    width: 88px;
+    height: 88px;
+    display: block;
+  }
+  .image-center {
+    width: 124px;
+    height: 115px;
+    // display: block;
+  }
   .title {
     width: 300px;
     height: 50px;
@@ -107,6 +123,7 @@ export default {
     .left,
     .right {
       width: 250px;
+      margin-bottom: 20px;
       display: flex;
       flex-wrap: wrap;
       justify-content: left;
@@ -132,7 +149,7 @@ export default {
     }
   }
   .bottom-news-brand {
-    background: url("../../assets/img/mediabg.png") 50% 50% no-repeat;
+    background: url("../../assets/img/mediabg.png") center center no-repeat;
     display: flex;
     justify-content: space-between;
     align-items: center;

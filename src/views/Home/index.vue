@@ -10,8 +10,18 @@
       </div>
       <div class="center-bigscreen">
         <ul class="count-data">
-          <li v-for="item,index in sumList" :key="index" class="discribe count-item">
-            <span class="num"><countTo :start-val="0" :end-val="item.number" :duration="3000" />{{ item.unit }}</span>
+          <li
+            v-for="(item, index) in sumList"
+            :key="index"
+            class="discribe count-item"
+          >
+            <span class="num"
+              ><countTo
+                :start-val="0"
+                :end-val="item.number"
+                :duration="3000"
+              />{{ item.unit }}</span
+            >
             <span class="num-label">{{ item.name }}</span>
           </li>
         </ul>
@@ -28,19 +38,21 @@
   </div>
 </template>
 <script>
-import socialVideo from './socialVideo/index.vue'
-import leftSocial from './leftSocial/index.vue'
-import ownProduct from './ownProduct/index.vue'
-import pratice from './practice'
-import News from '@/components/News'
-import MediaAttention from '@/components/MediaAttention'
-import ImportantMedia from '@/components/ImportantMedia'
-import countTo from 'vue-count-to'
-import { sumList } from './data'
-// import Swiper from './leftSocial/swiper.vue'
+import socialVideo from "./socialVideo/index.vue";
+import leftSocial from "./leftSocial/index.vue";
+import ownProduct from "./ownProduct/index.vue";
+import pratice from "./practice";
+import News from "@/components/News";
+import MediaAttention from "@/components/MediaAttention";
+import ImportantMedia from "@/components/ImportantMedia";
+import countTo from "vue-count-to";
+import { sumList } from "./data";
+import PicSlider from "@/components/PicSlider";
+import Swiper from "./leftSocial/swiper.vue";
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
+    // PicSlider,
     socialVideo,
     leftSocial,
     ownProduct,
@@ -48,22 +60,22 @@ export default {
     News,
     MediaAttention,
     ImportantMedia,
-    countTo
+    countTo,
     // Modal
     // Swiper
   },
   data() {
     return {
-      sumList: sumList
-    }
+      sumList: sumList,
+    };
   },
   computed: {},
   methods: {
     // popModal() {
     //   this.showModal = true;
     // },
-  }
-}
+  },
+};
 </script>
 <style lang="scss" scoped>
 .bigScreen {
@@ -112,7 +124,7 @@ export default {
       height: 110px;
       margin: 0 30px;
       background: url("../../assets/img/countbg.png") no-repeat;
-      background-size:100% auto;
+      background-size: 100% auto;
       display: flex;
       flex-direction: column;
       align-items: center;

@@ -2,10 +2,10 @@
   <div class="news">
     <div class="up-block">
       <ul>
-        <li v-for="i in upList" :key="i.id">
+        <li v-for="(i, ind) in upList" :key="i.id">
           <a href="https://www.ecnu.edu.cn/info/1095/58504.htm">
             <div class="content">
-              <img src="@/assets/img/newimg.jpg" alt="">
+              <img class="image" src="@/assets/img/newimg.jpg" alt="" />
               <div class="desc">
                 <div class="desc-up">
                   <span class="title">{{ i.title }}</span>
@@ -15,16 +15,16 @@
               </div>
             </div>
           </a>
-          <div v-if="i !== 3" class="line" />
+          <div v-if="ind !== 2" class="line" />
         </li>
       </ul>
     </div>
     <div class="down-block">
       <ul>
-        <li v-for="i in downList" :key="i.id">
+        <li v-for="(i, ind) in downList" :key="i.id">
           <a href="https://www.ecnu.edu.cn/info/1095/58504.htm">
             <div class="content">
-              <img src="@/assets/img/newimg.jpg" alt="">
+              <img class="image" src="@/assets/img/newimg.jpg" alt="" />
               <div class="desc">
                 <div class="desc-up">
                   <span class="title">《800架无人机编队飞行在苍穹之下》</span>
@@ -34,7 +34,7 @@
               </div>
             </div>
           </a>
-          <div v-if="i !== 3" class="line" />
+          <div v-if="ind !== 2" class="line" />
         </li>
       </ul>
     </div>
@@ -42,15 +42,15 @@
 </template>
 
 <script>
-import { upList, downList } from './constant'
+import { upList, downList } from "./constant";
 export default {
   data() {
     return {
       upList,
-      downList
-    }
-  }
-}
+      downList,
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -64,12 +64,27 @@ export default {
     width: 451px;
     background: linear-gradient(to right, #244a6c, #223958);
     margin-bottom: 44px;
+    height: 230px;
   }
   .down-block {
     width: 451px;
+    height: 230px;
     background: linear-gradient(to right, #3a4760, #293d5a);
   }
-
+  .image {
+    width: 81px;
+    height: 57px;
+    display: block;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .read-times {
+    font-size: 14px;
+  }
+  .date {
+    font-size: 12px;
+  }
   .content {
     height: 74px;
     display: flex;

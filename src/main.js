@@ -7,6 +7,10 @@ import locale from 'element-ui/lib/locale/lang/en' // lang i18n
 
 import '@/styles/index.scss' // global css
 
+
+import Carousel3d from 'vue-carousel-3d';
+
+
 import App from './App'
 import store from './store'
 import router from './router'
@@ -32,6 +36,8 @@ if (process.env.NODE_ENV === 'production') {
 
 // set ElementUI lang to EN
 Vue.use(ElementUI, { locale })
+Vue.use(Carousel3d);
+
 // 如果想要中文版 element-ui，按如下方式声明
 // Vue.use(ElementUI)
 Vue.use(VueAwesomeSwiper)
