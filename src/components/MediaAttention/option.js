@@ -30,7 +30,7 @@ export const settingOption = (title) => {
           rich: {
             per: {
               width: 40,
-              height: 40,
+              height: 40
             }
           }
         },
@@ -40,8 +40,8 @@ export const settingOption = (title) => {
         },
         color: ['#f4b19c', '#338afb'],
         data: [
-          { value: 1048, name: 'Search Engine',label:{backgroundColor:"#f4b19c",borderRadius:25,color:'#fff'} },
-          { value: 735, name: 'Direct' ,label:{backgroundColor:"#338afb",borderRadius:25,color:'#fff'}}
+          { value: 1048, name: 'Search Engine', label: { backgroundColor: '#f4b19c', borderRadius: 25, color: '#fff' }},
+          { value: 735, name: 'Direct', label: { backgroundColor: '#338afb', borderRadius: 25, color: '#fff' }}
 
         ]
       }

@@ -40,54 +40,39 @@
   </div>
 </template>
 <script>
-import socialVideo from "./socialVideo/index.vue";
-import leftSocial from "./leftSocial/index.vue";
-import ownProduct from "./ownProduct/index.vue";
-import pratice from "./practice";
-import News from "@/components/News";
-import MediaAttention from "@/components/MediaAttention";
-import ImportantMedia from "@/components/ImportantMedia";
-import Modal from "@/components/Modal";
+import socialVideo from './socialVideo/index.vue'
+import leftSocial from './leftSocial/index.vue'
+import ownProduct from './ownProduct/index.vue'
+import pratice from './practice'
+import News from '@/components/News'
+import MediaAttention from '@/components/MediaAttention'
+import ImportantMedia from '@/components/ImportantMedia'
+// import Modal from '@/components/Modal'
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
-<<<<<<< HEAD
-    swiper
-    // circleSwiper
-    // socialVideo,
-    // leftSocial,
-    // ownProduct,
-    // pratice,
-    // News,
-    // MediaAttention,
-    // ImportantMedia
-=======
     socialVideo,
     leftSocial,
     ownProduct,
     pratice,
     News,
     MediaAttention,
-    ImportantMedia,
-    Modal,
->>>>>>> origin/test
+    ImportantMedia
+    // Modal
   },
   data() {
-    return {};
+    return {}
   },
   computed: {},
   methods: {
     // popModal() {
     //   this.showModal = true;
     // },
-  },
-};
+  }
+}
 </script>
 <style lang="scss" scoped>
 .bigScreen {
-<<<<<<< HEAD
-
-=======
   position: relative;
 }
 .header {
@@ -160,7 +145,6 @@ export default {
 .left-bttom {
   display: flex;
   flex-direction: column;
->>>>>>> origin/test
 }
 .right-top {
   display: flex;

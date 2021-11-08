@@ -8,12 +8,12 @@
 </template>
 
 <script>
-import PicSlider from "../PicSlider";
+import PicSlider from '../PicSlider'
 export default {
   components: {
-    PicSlider,
-  },
-};
+    PicSlider
+  }
+}
 </script>
 
 <style lang="scss" scoped>

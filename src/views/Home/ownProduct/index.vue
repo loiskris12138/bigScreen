@@ -37,10 +37,10 @@
         <div v-else class="goverItem">
           <img
             class="app-pic"
-            @click="handleAppClick(item.type)"
             src="@/assets/img/phonePic1.jpg"
             alt=""
-          />
+            @click="handleAppClick(item.type)"
+          >
         </div>
       </div>
       <div v-if="showAppModal" class="app-modal-wrapper">
@@ -50,44 +50,44 @@
   </div>
 </template>
 <script>
-import { ownProductList, goverList } from "../data";
-import Modal from "@/components/Modal";
+import { ownProductList, goverList } from '../data'
+import Modal from '@/components/Modal'
 export default {
-  name: "OwnProduct",
+  name: 'OwnProduct',
   components: {
-    Modal,
+    Modal
   },
   data() {
     return {
       ownProductList: ownProductList,
       goverList: goverList,
       showWebSiteModal: false,
-      title: "",
-      showAppModal: false,
-    };
+      title: '',
+      showAppModal: false
+    }
   },
   methods: {
     handleWebSiteCick() {
       // handleWebSiteCick.log("dddd");
       // this.$emit("popModal");
 
-      this.showWebSiteModal = true;
+      this.showWebSiteModal = true
     },
     handleAppClick(title) {
       if (this.showAppModal) {
-        return;
+        return
       }
-      this.title = title;
-      this.showAppModal = true;
+      this.title = title
+      this.showAppModal = true
     },
     handleCloseWebSiteModal() {
-      this.showWebSiteModal = false;
+      this.showWebSiteModal = false
     },
     handleCloseAppModal() {
-      this.showAppModal = false;
-    },
-  },
-};
+      this.showAppModal = false
+    }
+  }
+}
 </script>
 <style lang="scss" scoped>
 .productGover {

@@ -8,17 +8,14 @@
 
 <script>
 export default {
-  name: "AppMain",
+  name: 'AppMain',
   computed: {
     key() {
-      return this.$route.path;
-    },
-<<<<<<< HEAD
-=======
+      return this.$route.path
+    }
     //
->>>>>>> test
-  },
-};
+  }
+}
 </script>
 
 <style scoped>

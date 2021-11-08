@@ -1,15 +1,15 @@
 <template>
   <div class="modal">
-    <div :class="['san', { 'app-san': title !== '官网' }]"></div>
+    <div :class="['san', { 'app-san': title !== '官网' }]" />
     <div class="iframe-wrapper">
       <div class="modal-top">
         <div class="title">{{ title }}</div>
         <div class="close" @click="close">
-          <img src="@/assets/img/X.png" />
+          <img src="@/assets/img/X.png">
         </div>
       </div>
       <iframe v-if="title === '官网'" :src="url" class="iframe" />
-      <img v-else class="iframe" src="@/assets/img/phonePic1.jpg" alt="" />
+      <img v-else class="iframe" src="@/assets/img/phonePic1.jpg" alt="">
     </div>
   </div>
 </template>
@@ -20,20 +20,20 @@ export default {
     url: {
       type: String,
       require: true,
-      default: "https://www.ecnu.edu.cn/index.htm",
+      default: 'https://www.ecnu.edu.cn/index.htm'
     },
     title: {
       type: String,
       require: true,
-      default: "官网",
-    },
+      default: '官网'
+    }
   },
   methods: {
     close() {
-      this.$emit("handleClose");
-    },
-  },
-};
+      this.$emit('handleClose')
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

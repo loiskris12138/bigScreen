@@ -24,34 +24,34 @@
         </ul>
       </div>
       <div class="bottom-news-brand">
-        <li><img src="@/assets/img/news4.png" alt="" /></li>
-        <li><img src="@/assets/img/news3.png" alt="" /></li>
-        <li><img src="@/assets/img/renmin.png" alt="" /></li>
-        <li><img src="@/assets/img/news1.png" alt="" /></li>
-        <li><img src="@/assets/img/news2.png" alt="" /></li>
+        <li><img src="@/assets/img/news4.png" alt=""></li>
+        <li><img src="@/assets/img/news3.png" alt=""></li>
+        <li><img src="@/assets/img/renmin.png" alt=""></li>
+        <li><img src="@/assets/img/news1.png" alt=""></li>
+        <li><img src="@/assets/img/news2.png" alt=""></li>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Title from "@/components/common/Title.vue";
-import PieChart from "./PieChart.vue";
-import { leftTag, rightTag } from "./constant";
+// import Title from '@/components/common/Title.vue'
+import PieChart from './PieChart.vue'
+import { leftTag, rightTag } from './constant'
 export default {
   components: {
-    Title,
-    PieChart,
+    // Title,
+    PieChart
   },
   data: () => {
     return {
       leftTag,
-      rightTag,
-    };
+      rightTag
+    }
   },
 
-  created: () => {},
-};
+  created: () => {}
+}
 </script>
 
 <style lang="scss" scoped>

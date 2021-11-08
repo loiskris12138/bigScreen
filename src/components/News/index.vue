@@ -5,7 +5,7 @@
         <li v-for="i in upList" :key="i.id">
           <a href="https://www.ecnu.edu.cn/info/1095/58504.htm">
             <div class="content">
-              <img src="@/assets/img/newimg.jpg" alt="" />
+              <img src="@/assets/img/newimg.jpg" alt="">
               <div class="desc">
                 <div class="desc-up">
                   <span class="title">{{ i.title }}</span>
@@ -15,7 +15,7 @@
               </div>
             </div>
           </a>
-          <div class="line" v-if="i !== 3"></div>
+          <div v-if="i !== 3" class="line" />
         </li>
       </ul>
     </div>
@@ -24,7 +24,7 @@
         <li v-for="i in downList" :key="i.id">
           <a href="https://www.ecnu.edu.cn/info/1095/58504.htm">
             <div class="content">
-              <img src="@/assets/img/newimg.jpg" alt="" />
+              <img src="@/assets/img/newimg.jpg" alt="">
               <div class="desc">
                 <div class="desc-up">
                   <span class="title">《800架无人机编队飞行在苍穹之下》</span>
@@ -34,7 +34,7 @@
               </div>
             </div>
           </a>
-          <div class="line" v-if="i !== 3"></div>
+          <div v-if="i !== 3" class="line" />
         </li>
       </ul>
     </div>
@@ -42,15 +42,15 @@
 </template>
 
 <script>
-import { upList, downList } from "./constant";
+import { upList, downList } from './constant'
 export default {
   data() {
     return {
       upList,
-      downList,
-    };
-  },
-};
+      downList
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
