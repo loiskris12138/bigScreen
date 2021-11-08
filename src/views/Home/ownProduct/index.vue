@@ -70,7 +70,6 @@ export default {
     }
   },
   created() {
-    console.error(this.tabList)
   },
   methods: {
     changeActiveTab(id) {

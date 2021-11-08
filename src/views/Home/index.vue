@@ -15,17 +15,19 @@
             :key="index"
             class="discribe count-item"
           >
-            <span class="num"
-              ><countTo
-                :start-val="0"
-                :end-val="item.number"
-                :duration="3000"
-              />{{ item.unit }}</span
-            >
+            <span
+              class="num"
+            ><countTo
+              :start-val="0"
+              :end-val="item.number"
+              :duration="3000"
+            />{{ item.unit }}</span>
             <span class="num-label">{{ item.name }}</span>
           </li>
         </ul>
-        fsflsdjflsdfjlskfjlskfjlkdjfdjkefkjkjdksflkdsjfldsfjslkfjdlskfjklsdfjdlsfjdlsfjdlsjflsjfdsljflsj
+        <div class="carouselArea">
+          <carousel />
+        </div>
       </div>
       <div class="right-bigscreen">
         <div class="right-top">
@@ -38,19 +40,18 @@
   </div>
 </template>
 <script>
-import socialVideo from "./socialVideo/index.vue";
-import leftSocial from "./leftSocial/index.vue";
-import ownProduct from "./ownProduct/index.vue";
-import pratice from "./practice";
-import News from "@/components/News";
-import MediaAttention from "@/components/MediaAttention";
-import ImportantMedia from "@/components/ImportantMedia";
-import countTo from "vue-count-to";
-import { sumList } from "./data";
-import PicSlider from "@/components/PicSlider";
-import Swiper from "./leftSocial/swiper.vue";
+import socialVideo from './socialVideo/index.vue'
+import leftSocial from './leftSocial/index.vue'
+import ownProduct from './ownProduct/index.vue'
+import pratice from './practice'
+import News from '@/components/News'
+import MediaAttention from '@/components/MediaAttention'
+import ImportantMedia from '@/components/ImportantMedia'
+import countTo from 'vue-count-to'
+import { sumList } from './data'
+import carousel from './carousel'
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     // PicSlider,
     socialVideo,
@@ -61,21 +62,22 @@ export default {
     MediaAttention,
     ImportantMedia,
     countTo,
+    carousel
     // Modal
     // Swiper
   },
   data() {
     return {
-      sumList: sumList,
-    };
+      sumList: sumList
+    }
   },
   computed: {},
   methods: {
     // popModal() {
     //   this.showModal = true;
     // },
-  },
-};
+  }
+}
 </script>
 <style lang="scss" scoped>
 .bigScreen {
@@ -110,7 +112,6 @@ export default {
   flex: 0 0 auto;
   flex-shrink: 0;
   width: 1357px;
-  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,7 +119,7 @@ export default {
     display: flex;
     justify-content: left;
     align-items: center;
-    margin: 0 auto;
+    margin: 30px auto;
     .count-item {
       width: 210px;
       height: 110px;
@@ -156,5 +157,13 @@ export default {
 .right-top {
   display: flex;
   justify-content: left;
+}
+.carouselArea {
+  padding-top:70px;
+  margin-top: 70px;
+  width: 1200px;
+  background: url("~@/assets/img/centerCarousel/carouselBg.png") no-repeat;
+  height: 900px;
+  background-size: 100% auto;
 }
 </style>
