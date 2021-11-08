@@ -28,13 +28,19 @@ export default {
       myChart: null
     }
   },
+
   mounted() {
     this.initChart()
   },
   destroyed() {
     this.myChart && this.myChart.dispose()
   },
+
   methods: {
+    fontSet(val) {
+      const htmlWidth = document.documentElement.clientWidth || document.body.clientWidth
+      return Math.round(htmlWidth / 1920 * val)
+    },
     initChart() {
       this.myChart = echarts.init(document.getElementById(this.setid))
       const option = {
@@ -74,7 +80,7 @@ export default {
             },
             axisLabel: {
               margin: 13,
-              fontSize: 18,
+              fontSize: this.fontSet(18),
               color: '#A1A1A1',
               interval: 0// 展示所有标签
             }
@@ -96,7 +102,7 @@ export default {
             },
             axisLabel: {
               margin: 9,
-              fontSize: 18,
+              fontSize: this.fontSet(18),
               color: '#A1A1A1'
             },
             splitLine: {

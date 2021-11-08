@@ -9,6 +9,18 @@
             <div class="circleBigBg" />
             <div class="circleBg" />
           </div>
+          <div
+            v-else-if="item.id === acitveKey - 1 || item.id === acitveKey + 1"
+            class="imgArea closeImg"
+          >
+            <img :src="item.imgUrl" alt="">
+          </div>
+          <div
+            v-else-if="item.id === acitveKey - 2 || item.id === acitveKey + 2"
+            class="imgArea intervalImg"
+          >
+            <img :src="item.imgUrl" alt="">
+          </div>
           <div v-else class="imgArea" @click="changeActiveKey(item)">
             <img :src="item.imgUrl" alt="">
           </div>
@@ -71,17 +83,28 @@ export default {
     display: flex;
     align-items: center;
     .imgArea {
-      width: 59px;
-      height: 59px;
+      width: 71px;
+      height: 71px;
       border-radius: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
+
       img {
         width: 100%;
       }
     }
+    .closeImg {
+      width: 44px;
+      height: 44px;
+      margin: 0px 14px 0px 17px;
+    }
+    .intervalImg {
+      width: 36px;
+      height: 36px;
+    }
     .activeImg {
+      display: flex;
       padding: 6px;
       border: 1px dashed #33facf;
     }
@@ -100,7 +123,8 @@ export default {
     top: -25px;
     width: 106px;
     height: 27px;
-    background: url(../../../assets/img/carousol/circle2.png);
+    // background: url(../../../assets/img/carousol/circle2.png);
+    background: red;
     flex-shrink: 0;
     background-position: center center;
     transform: rotateY(360deg);

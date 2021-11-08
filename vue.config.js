@@ -28,6 +28,19 @@ module.exports = {
   outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          require('postcss-pxtorem')({
+            rootValue: 15, // 换算的基数
+            selectorBlackList: ['weui', 'mu'],
+            propList: ['*']
+          })
+        ]
+      }
+    }
+  },
   productionSourceMap: false,
   devServer: {
     port: port,

@@ -21,7 +21,7 @@
             <span>App</span>
           </div>
         </div>
-        <div class="modal-wrapper">
+        <div class="modal-wrapper webFrame">
           <modal
             v-show="showWebSiteModal"
             title="官网"
@@ -111,6 +111,7 @@ export default {
         line-height: 18px;
         margin-bottom: 17px;
         border-radius: 9px;
+        white-space: nowrap;
         &:last-child {
           margin-bottom: 0px;
         }
@@ -170,15 +171,14 @@ export default {
       border: 6px solid #182940;
       border-radius: 4px;
       .app-pic {
-        display: block;
-        width: 100%;
-        height: 100%;
+        width: 72px;
+        height: 134px;
       }
     }
     .app-modal-wrapper {
       position: absolute;
       width: 425px;
-      height: 712px;
+      // height: 635px;
       z-index: 1200;
       left: 100%;
       bottom: 0%;
@@ -191,6 +191,9 @@ export default {
     left: 104%;
     width: 1040px;
     height: 712px;
+  }
+  .webFrame {
+    height: 635px;
   }
 }
 </style>

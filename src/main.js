@@ -15,6 +15,7 @@ import '@/icons' // icon
 import '@/permission' // permission control
 import VueAwesomeSwiper from 'vue-awesome-swiper'// Import Swiper styles
 import 'swiper/swiper-bundle.css'
+import '@/lib.js'
 
 /**
  * If you don't want to use mock-server

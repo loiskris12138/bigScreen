@@ -8,7 +8,7 @@
           <img src="@/assets/img/X.png">
         </div>
       </div>
-      <iframe v-if="title === '官网'" :src="url" class="iframe" />
+      <iframe v-if="title === '官网'" :src="url" class="iframe" frameborder="0" />
       <img v-else class="iframe" src="@/assets/img/phonePic1.jpg" alt="">
     </div>
   </div>

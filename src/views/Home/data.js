@@ -227,3 +227,20 @@ export const trendChartList = [{
   data: [100, 12, 12, 34, 23, 12, 12, 23, 34, 12, 45, 56],
   sdata: [10, 23, 23, 34, 32, 12, 23, 32, 34, 12, 45, 5]
 }]
+export const sumList = [{
+  name: '关注数',
+  number: 10,
+  unit: '万+'
+}, {
+  name: '用户数',
+  number: 94648,
+  unit: ''
+}, {
+  name: '年度阅读数',
+  number: 933718,
+  unit: ''
+}, {
+  name: '年度发布数',
+  number: 10,
+  unit: ''
+}]
