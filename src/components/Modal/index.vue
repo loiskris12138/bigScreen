@@ -26,7 +26,15 @@ export default {
       type: String,
       require: true,
       default: '官网'
+    },
+    appId: {
+      type: Number,
+      require: true,
+      default: 1
+
     }
+  },
+  computed: {
   },
   methods: {
     close() {

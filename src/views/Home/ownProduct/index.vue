@@ -21,7 +21,7 @@
             <span>App</span>
           </div>
         </div>
-        <div class="modal-wrapper webFrame">
+        <div v-show="showWebSiteModal" class="modal-wrapper webFrame">
           <modal
             v-show="showWebSiteModal"
             title="官网"
@@ -37,14 +37,14 @@
         <div v-else class="goverItem">
           <img
             class="app-pic"
-            src="@/assets/img/phonePic1.jpg"
+            :src="item.appImgUrl"
             alt=""
-            @click="handleAppClick(item.type)"
+            @click="handleAppClick(item.type,item.id)"
           >
         </div>
       </div>
       <div v-if="showAppModal" class="app-modal-wrapper">
-        <modal :title="title" @handleClose="handleCloseAppModal" />
+        <modal :title="title" :img="appId" @handleClose="handleCloseAppModal" />
       </div>
     </div>
   </div>
@@ -63,7 +63,8 @@ export default {
       goverList: goverList,
       showWebSiteModal: false,
       title: '',
-      showAppModal: false
+      showAppModal: false,
+      appId: 0
     }
   },
   methods: {
@@ -73,11 +74,13 @@ export default {
 
       this.showWebSiteModal = true
     },
-    handleAppClick(title) {
+    handleAppClick(type, id) {
       if (this.showAppModal) {
         return
       }
-      this.title = title
+      this.title = type
+
+      this.appId = id
       this.showAppModal = true
     },
     handleCloseWebSiteModal() {
@@ -124,7 +127,9 @@ export default {
         box-sizing: border-box;
         border-radius: 6px;
         border: 7px solid #182940;
-        background: rgb(131, 114, 114);
+        background: url(~@/assets/img/weboffical.png) no-repeat;
+        background-size: 100% auto;
+        cursor: pointer;
       }
       .ownTab {
         width: 300px;
@@ -165,6 +170,7 @@ export default {
       color: #fefefe;
     }
     .goverItem {
+      cursor: pointer;
       width: 84px;
       height: 146px;
       background: #88748d;

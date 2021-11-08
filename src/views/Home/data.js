@@ -65,7 +65,7 @@ export const swiperList = [{
     color: '#30D5F9'
   }, {
     name: '发稿数',
-    count: '45',
+    count: '45条',
     bgImgUrl: require('@/assets/img/leftSocial/sendBg.png'),
     contentImgUrl: require('@/assets/img/leftSocial/send.png'),
     color: '#33FACF'
@@ -114,7 +114,7 @@ export const swiperList = [{
     color: '#30D5F9'
   }, {
     name: '发稿数',
-    count: '160',
+    count: '160条',
     bgImgUrl: require('@/assets/img/leftSocial/sendBg.png'),
     contentImgUrl: require('@/assets/img/leftSocial/send.png'),
     color: '#33FACF'
@@ -308,7 +308,7 @@ export const swiperList = [{
     color: '#30D5F9'
   }, {
     name: '发稿数',
-    count: '23',
+    count: '23条',
     bgImgUrl: require('@/assets/img/leftSocial/sendBg.png'),
     contentImgUrl: require('@/assets/img/leftSocial/send.png'),
     color: '#33FACF'
@@ -338,7 +338,7 @@ export const swiperList = [{
   }]
 },
 {
-  id: 10,
+  id: 8,
   name: '网易云',
   imgUrl: require(`@/assets/img/socialVideo/wangyiyun.png`),
   infoSumList: [{
@@ -356,7 +356,7 @@ export const swiperList = [{
     color: '#30D5F9'
   }, {
     name: '发稿数',
-    count: '32',
+    count: '32条',
     bgImgUrl: require('@/assets/img/leftSocial/sendBg.png'),
     contentImgUrl: require('@/assets/img/leftSocial/send.png'),
     color: '#33FACF'
@@ -389,106 +389,321 @@ export const swiperList = [{
 export const mediaList = [{
   id: 1,
   name: '抖音',
-  imgUrl: require(`@/assets/img/socialVideo/app(1).png`)
+  imgUrl: require(`@/assets/img/socialVideo/douyin.png`),
+  trendChartList: [{
+    name: '阅读数趋势',
+    id: 'readTrend',
+    xAxis: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, '/月'],
+    data: [309.2, 349.1, 454.3, 548.9, 94.9, 252.45, 252.45, 70.7, 106.2, 361.4, 92.9, 136.5],
+    sdata: [365.8, 262.8, 392, 129.2, 208.8, 253.8, 249, 118.5, 134.5, 71.1]
+  },
+  {
+    name: '粉丝数趋势',
+    id: 'fansTrend',
+    xAxis: ['2020', '2021'],
+    data: ['17.6', '21.5'],
+    sdata: []
+  }, {
+    name: '发稿数趋势',
+    id: 'sendTrend',
+    xAxis: ['2020', '2021'],
+    data: ['132', '160'],
+    sdata: []
+  }
+  ]
 
 },
 {
   id: 2,
   name: '微博',
-  imgUrl: require(`@/assets/img/socialVideo/app(2).png`)
+  imgUrl: require(`@/assets/img/socialVideo/weibo.png`),
+  trendChartList: [{
+    name: '阅读数趋势',
+    id: 'readTrend',
+    xAxis: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, null, null, '/月'],
+    data: [571.3, 1136.3, 1435.9, 720.3, 725.5, 1750.3, 570.3, 612.2, 488.6, 1652.7],
+    sdata: [746, 645.4, 584.5, 1025, 1003.7, 1745.3, 1586.1, 731.9, 820.9, 1675]
+  },
+  {
+    name: '粉丝数趋势',
+    id: 'fansTrend',
+    xAxis: ['2020', '2021'],
+    data: ['169', '164.3'],
+    sdata: []
+  }, {
+    name: '发稿数趋势',
+    id: 'sendTrend',
+    xAxis: ['2020', '2021'],
+    data: [701, 1018],
+    sdata: []
+  }
+  ]
 
 },
+{
+  id: 3,
+  name: '头条',
+  imgUrl: require(`@/assets/img/socialVideo/toutiao.png`),
+  trendChartList: [{
+    name: '阅读数趋势',
+    id: 'readTrend',
+    xAxis: [],
+    data: [],
+    sdata: []
+  },
+  {
+    name: '粉丝数趋势',
+    id: 'fansTrend',
+    xAxis: [],
+    data: [],
+    sdata: []
+  }, {
+    name: '发稿数趋势',
+    id: 'sendTrend',
+    xAxis: [],
+    data: [],
+    sdata: []
+  }
+  ]
 
+},
 {
   id: 4,
   name: '微信',
-  imgUrl: require(`@/assets/img/socialVideo/app(4).png`)
+  imgUrl: require(`@/assets/img/socialVideo/weixin.png`),
+  trendChartList: [{
+    name: '阅读数趋势',
+    id: 'readTrend',
+    xAxis: [],
+    data: [],
+    sdata: []
+  },
+  {
+    name: '粉丝数趋势',
+    id: 'fansTrend',
+    xAxis: [],
+    data: [],
+    sdata: []
+  }, {
+    name: '发稿数趋势',
+    id: 'sendTrend',
+    xAxis: [],
+    data: [],
+    sdata: []
+  }
+  ]
 
 },
 {
   id: 5,
   name: 'bilibili',
-  imgUrl: require(`@/assets/img/socialVideo/app(5).png`)
+  imgUrl: require(`@/assets/img/socialVideo/bilibili.png`),
+  trendChartList: [{
+    name: '阅读数趋势',
+    id: 'readTrend',
+    xAxis: ['2020', '2021'],
+    data: [1505897, 891170],
+    sdata: []
+  },
+  {
+    name: '粉丝数趋势',
+    id: 'fansTrend',
+    xAxis: ['2021', '2021'],
+    data: [52602, 86038],
+    sdata: []
+  }, {
+    name: '发稿数趋势',
+    id: 'sendTrend',
+    xAxis: ['2020', '2021'],
+    data: [72, 45],
+    sdata: []
+  }
+  ]
 
 },
 {
   id: 6,
   name: '快手',
-  imgUrl: require(`@/assets/img/socialVideo/app(6).png`)
+  imgUrl: require(`@/assets/img/socialVideo/kuaishou.png`),
+  trendChartList: [{
+    name: '阅读数趋势',
+    id: 'readTrend',
+    xAxis: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, '/月'],
+    data: [null, null, 3.7, 102.7, 0.5, 69.86, 29.9, 98.8, 123.6, 61.5, 4.5, 3.8],
+    sdata: [222.4, 179.3, 387.6, 519.5, 225.4, 139.8, 162.5, 54.4, 70, 48.9, null, null]
+  },
+  {
+    name: '粉丝数趋势',
+    id: 'fansTrend',
+    xAxis: ['2020', '2021'],
+    data: [1.0, 2.2],
+    sdata: []
+  }, {
+    name: '发稿数趋势',
+    id: 'sendTrend',
+    xAxis: ['2020', '2021'],
+    data: [160, 148],
+    sdata: []
+  }
+  ]
 
 },
 {
   id: 7,
   name: '央视频',
-  imgUrl: require(`@/assets/img/socialVideo/app(1).png`)
+  imgUrl: require(`@/assets/img/socialVideo/yangshipin.png`),
+  trendChartList: [{
+    name: '阅读数趋势',
+    id: 'readTrend',
+    xAxis: ['2020', '2021'],
+    data: [12464, 10846],
+    sdata: []
+  },
+  {
+    name: '粉丝数趋势',
+    id: 'fansTrend',
+    xAxis: ['2021'],
+    data: [2353],
+    sdata: []
+  }, {
+    name: '发稿数趋势',
+    id: 'sendTrend',
+    xAxis: ['2020', '2020'],
+    data: [33, 46],
+    sdata: []
+  }
+  ]
 
 },
 {
   id: 8,
   name: '视频号',
-  imgUrl: require(`@/assets/img/socialVideo/app(2).png`)
+  imgUrl: require(`@/assets/img/socialVideo/shipinhao.png`),
+  trendChartList: [{
+    name: '阅读数趋势',
+    id: 'readTrend',
+    xAxis: ['2020', '2021'],
+    data: [477, 710.3688],
+    sdata: []
+  },
+  {
+    name: '粉丝数趋势',
+    id: 'fansTrend',
+    xAxis: [],
+    data: [],
+    sdata: []
+  }, {
+    name: '发稿数趋势',
+    id: 'sendTrend',
+    xAxis: ['2020', '2021'],
+    data: [9, 52],
+    sdata: []
+  }
+  ]
 
 },
 {
   id: 9,
   name: '喜马拉雅',
-  imgUrl: require(`@/assets/img/socialVideo/app(3).png`)
+  imgUrl: require(`@/assets/img/socialVideo/ximalaya.png`),
+  trendChartList: [{
+    name: '阅读数趋势',
+    id: 'readTrend',
+    xAxis: ['2020', '2021'],
+    data: [5915, 10547],
+    sdata: []
+  },
+  {
+    name: '粉丝数趋势',
+    id: 'fansTrend',
+    xAxis: ['2020', '2021'],
+    data: [4791, 4851],
+    sdata: []
+  }, {
+    name: '发稿数趋势',
+    id: 'sendTrend',
+    xAxis: ['2020', '2021'],
+    data: [22, 23],
+    sdata: []
+  }
+  ]
 
 },
 {
   id: 10,
   name: '网易云',
-  imgUrl: require(`@/assets/img/socialVideo/app(4).png`)
+  imgUrl: require(`@/assets/img/socialVideo/wangyiyun.png`),
+  trendChartList: [{
+    name: '阅读数趋势',
+    id: 'readTrend',
+    xAxis: ['2020', '2021'],
+    data: [3251, 6096],
+    sdata: []
+  },
+  {
+    name: '粉丝数趋势',
+    id: 'fansTrend',
+    xAxis: ['2020', '2021'],
+    data: [1218, 1218],
+    sdata: []
+  }, {
+    name: '发稿数趋势',
+    id: 'sendTrend',
+    xAxis: ['2020', '2021'],
+    data: [20, 32],
+    sdata: []
+  }
+  ]
 
 }
 ]
 export const friendsList = [{
   name: '朋友圈',
-  imgUrl: require('@/assets/img/friendsCircle/friend(1).png')
+  imgUrl: require('@/assets/img/friendsCircle/friend(1).jpg')
 },
 {
   name: '朋友圈',
-  imgUrl: require('@/assets/img/friendsCircle/friend(2).png')
+  imgUrl: require('@/assets/img/friendsCircle/friend(2).jpg')
 },
 {
   name: '朋友圈',
-  imgUrl: require('@/assets/img/friendsCircle/friend(3).png')
+  imgUrl: require('@/assets/img/friendsCircle/friend(3).jpg')
 },
 {
   name: '朋友圈',
-  imgUrl: require('@/assets/img/friendsCircle/friend(4).png')
+  imgUrl: require('@/assets/img/friendsCircle/friend(4).jpg')
 },
 {
   name: '朋友圈',
-  imgUrl: require('@/assets/img/friendsCircle/friend(5).png')
+  imgUrl: require('@/assets/img/friendsCircle/friend(5).jpg')
 },
 {
   name: '朋友圈',
-  imgUrl: require('@/assets/img/friendsCircle/friend(1).png')
+  imgUrl: require('@/assets/img/friendsCircle/friend(6).jpg')
 },
 {
   name: '朋友圈',
-  imgUrl: require('@/assets/img/friendsCircle/friend(1).png')
+  imgUrl: require('@/assets/img/friendsCircle/friend(7).jpg')
 },
 {
   name: '朋友圈',
-  imgUrl: require('@/assets/img/friendsCircle/friend(1).png')
+  imgUrl: require('@/assets/img/friendsCircle/friend(8).jpg')
 },
 {
   name: '朋友圈',
-  imgUrl: require('@/assets/img/friendsCircle/friend(1).png')
+  imgUrl: require('@/assets/img/friendsCircle/friend(9).jpg')
 },
 {
   name: '朋友圈',
-  imgUrl: require('@/assets/img/friendsCircle/friend(1).png')
+  imgUrl: require('@/assets/img/friendsCircle/friend(10).jpg')
 },
 {
   name: '朋友圈',
-  imgUrl: require('@/assets/img/friendsCircle/friend(1).png')
+  imgUrl: require('@/assets/img/friendsCircle/friend(11).jpg')
 },
 {
   name: '朋友圈',
-  imgUrl: require('@/assets/img/friendsCircle/friend(1).png')
+  imgUrl: require('@/assets/img/friendsCircle/friend(12).jpg')
 }
 
 ]
@@ -533,52 +748,55 @@ export const goverList = [{
   title: '中国教育发布'
 },
 {
-  type: '中国教育发布',
-  appImgUrl: ''
+  id: 1,
+  type: 'app',
+  appImgUrl: require(`@/assets/img/phonePic1.jpg`)
 },
 {
-  type: '中国教育发布',
-
-  appImgUrl: ''
+  id: 2,
+  type: 'app',
+  appImgUrl: require(`@/assets/img/phonePic2.jpg`)
 },
 {
   title: '学习强国'
 },
 {
-  type: '学习强国',
+  id: 3,
+  type: 'app',
 
-  appImgUrl: ''
+  appImgUrl: require(`@/assets/img/phonePic3.jpg`)
 },
 {
-  type: '学习强国',
-  appImgUrl: ''
+  id: 4,
+  type: 'app',
+  appImgUrl: require(`@/assets/img/phonePic4.jpg`)
 }
 ]
 export const praticeList = [{
   title: '校园文化,综合类融媒实践',
   content: '“芳信东来，山河无恙”2020 春季赏花云直播'
 }]
-export const trendChartList = [{
-  name: '阅读数趋势',
-  id: 'readTrend',
-  xAxis: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, '/月'],
-  data: [100, 12, 12, 34, 23, 12, 12, 23, 34, 12, 45, 56],
-  sdata: [10, 23, 23, 34, 32, 12, 23, 32, 34, 12, 45, 5]
-},
-{
-  name: '粉丝数趋势',
-  id: 'fansTrend',
-  xAxis: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, '/月'],
-  data: [100, 12, 12, 34, 23, 12, 12, 23, 34, 12, 45, 56],
-  sdata: [10, 23, 23, 34, 32, 12, 23, 32, 34, 12, 45, 5]
-}, {
-  name: '发稿数趋势',
-  id: 'sendTrend',
-  xAxis: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, '/月'],
-  data: [100, 12, 12, 34, 23, 12, 12, 23, 34, 12, 45, 56],
-  sdata: [10, 23, 23, 34, 32, 12, 23, 32, 34, 12, 45, 5]
-}
-]
+// export const trendChartList = [{
+//   name: '阅读数趋势',
+//   id: 'readTrend',
+//   xAxis: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, '/月'],
+//   data: [100, 12, 12, 34, 23, 12, 12, 23, 34, 12, 45, 56],
+//   sdata: [10, 23, 23, 34, 32, 12, 23, 32, 34, 12, 45, 5]
+// },
+// {
+//   name: '粉丝数趋势',
+//   id: 'fansTrend',
+//   xAxis: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, '/月'],
+//   data: [100, 12, 12, 34, 23, 12, 12, 23, 34, 12, 45, 56],
+//   sdata: [10, 23, 23, 34, 32, 12, 23, 32, 34, 12, 45, 5]
+// }, {
+//   name: '发稿数趋势',
+//   id: 'sendTrend',
+//   xAxis: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, '/月'],
+//   data: [100, 12, 12, 34, 23, 12, 12, 23, 34, 12, 45, 56],
+//   sdata: [10, 23, 23, 34, 32, 12, 23, 32, 34, 12, 45, 5]
+// }
+// ]
 export const sumList = [{
   name: '关注数',
   number: 10,

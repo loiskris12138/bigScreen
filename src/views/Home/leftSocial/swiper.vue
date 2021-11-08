@@ -14,18 +14,18 @@
             <div
               v-else-if="item.id === prevImgId || item.id === nextImgId"
               class="closeImg"
-              @click="changeActiveKey(item)"
             >
               <img :src="item.imgUrl" alt="">
             </div>
             <div
               v-else-if="item.id === prev2ImgId || item.id === next2ImgId"
               class="intervalImg"
-              @click="changeActiveKey(item)"
             >
               <img :src="item.imgUrl" alt="">
             </div>
-            <div v-else @click="changeActiveKey(item)">
+            <div
+              v-else
+            >
               <img :src="item.imgUrl" alt="">
             </div>
           </li>
@@ -41,7 +41,8 @@ export default {
   data() {
     return {
       swiperList: swiperList,
-      acitveKey: 3
+      acitveKey: 3,
+      interval: null
     }
   },
   computed: {
@@ -88,8 +89,17 @@ export default {
   },
   watch: {
     acitveKey(val) {
-      this.$emit('getActiveItem', this.swiperList[val - 1])
+      this.$emit('getActiveItem', val - 1)
     }
+  },
+  created() {
+    this.interval && clearInterval(this.interval)
+    this.interval = setInterval(() => {
+      this.clickNext()
+    }, 2000)
+  },
+  destroyed() {
+    this.interval && clearInterval(this.interval)
   },
   methods: {
     clickPrev() {
@@ -109,10 +119,8 @@ export default {
         dataTemp = 1
       }
       this.acitveKey = dataTemp
-    },
-    changeActiveKey(item) {
-      this.acitveKey = item.id
     }
+
   }
 }
 </script>
@@ -170,12 +178,13 @@ export default {
         height: 71px;
         padding: 6px;
         border: 1px dashed #33facf;
+        // transition:all 2s ease 0s;
       }
     }
   }
   .circleBg {
     position: absolute;
-    bottom: 20px;
+    bottom: 23px;
     width: 95px;
     height: 24px;
     background: url(~@/assets/img/carousol/circle.png) no-repeat;
@@ -201,7 +210,7 @@ export default {
     font-size: 20px;
     position: absolute;
     bottom: -0px;
-    // color:#fff;
+    color:#fff;
   }
 }
 @keyframes trans {

@@ -21,6 +21,10 @@ export default {
     sdata: {
       type: Array,
       required: true
+    },
+    itemId: {
+      type: Number,
+      required: true
     }
   },
   data() {
@@ -28,9 +32,15 @@ export default {
       myChart: null
     }
   },
+  watch: {
+    itemId() {
+      this.setOption()
+    }
 
+  },
   mounted() {
     this.initChart()
+    this.setOption()
   },
   destroyed() {
     this.myChart && this.myChart.dispose()
@@ -43,6 +53,8 @@ export default {
     },
     initChart() {
       this.myChart = echarts.init(document.getElementById(this.setid))
+    },
+    setOption() {
       const option = {
         color: ['#5B51C8', '#F4B19C'],
         tooltip: {
@@ -58,7 +70,7 @@ export default {
         grid: {
           top: '15',
           left: '0',
-          right: '10',
+          right: '15',
           bottom: '3%',
           containLabel: true
         },

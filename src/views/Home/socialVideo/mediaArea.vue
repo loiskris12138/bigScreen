@@ -1,6 +1,6 @@
 <template>
   <div class="mediaArea">
-    <div v-for="(item, index) in mediaList" :key="index" class="mediaItem">
+    <div v-for="(item) in mediaList" :key="item.id" class="mediaItem" @click="changeActiveTab(item.id)">
       <img :src="item.imgUrl">
       <span v-if="item.name==='喜马拉雅'" class="smallFont">{{ item.name }}</span>
       <span v-else>{{ item.name }}</span>
@@ -15,6 +15,10 @@ export default {
     return {
       mediaList: mediaList
     }
+  }, methods: {
+    changeActiveTab(id) {
+      this.$emit('getActiveTabItem', this.mediaList[id - 1])
+    }
   }
 
 }
@@ -28,6 +32,7 @@ export default {
       margin-top:25px;
       margin-bottom:30px;
       .mediaItem {
+        cursor: pointer;
         width: 113px;
         height: 43px;
         background: #304a7a;

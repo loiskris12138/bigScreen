@@ -6,6 +6,7 @@
         <div v-for="(item, index) in trendChartList" :key="index">
           <h3 class="subTitle">{{ item.name }}</h3>
           <trendEchart
+            :item-id="itemId"
             :setid="item.id"
             :xaxis="item.xAxis"
             :dataarray="item.data"
@@ -15,7 +16,7 @@
       </div>
       <div class="rightArea">
         <h3 class="subTitle">国内外新媒体平台</h3>
-        <mediaArea />
+        <mediaArea @getActiveTabItem="getActiveTabItem" />
         <h3 class="subTitle">丽娃朋友圈</h3>
         <friendsCircle />
       </div>
@@ -26,8 +27,7 @@
 import trendEchart from './trendEchart'
 import friendsCircle from './friendsCircle.vue'
 import mediaArea from './mediaArea.vue'
-import { trendChartList } from '../data'
-
+import { mediaList } from '../data'
 export default {
   name: 'SocialVideo',
   components: {
@@ -37,12 +37,20 @@ export default {
   },
   data() {
     return {
-      trendChartList: trendChartList
+      mediaList: mediaList,
+      trendChartList: mediaList[0].trendChartList,
+      itemId: 0
     }
   },
-  mounted() {},
+  mounted() {
+  },
   created() {},
-  methods: {}
+  methods: {
+    getActiveTabItem(item) {
+      this.trendChartList = item.trendChartList
+      this.itemId = item.id - 1
+    }
+  }
 }
 </script>
 

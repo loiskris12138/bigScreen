@@ -3,7 +3,7 @@
     <div class="commonHeadLine">国内社交音频视频号</div>
     <div class="leftSocialContent">
       <div class="carouselArea">
-        <swiper />
+        <swiper @getActiveItem="getActiveItem" />
       </div>
       <div class="infoSumArea">
         <div v-for="(item, index) in infoSumList" :key="index" class="infoItem">
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="newsArea">
-        <div v-for="(item, index) in newsList" :key="index" class="newItem">
+        <div v-for="(item, index) in newsLists" :key="index" class="newItem">
           <a
             href="https://www.ecnu.edu.cn/info/1095/58504.htm"
             class="newshref"
@@ -45,14 +45,14 @@ export default {
   },
   data() {
     return {
-      newsList: swiperList[2].newsList,
+      newsLists: swiperList[2].newLists,
       infoSumList: swiperList[2].infoSumList
     }
   },
   methods: {
     getActiveItem(item) {
-      this.infoSumList = item.infoSumList
-      this.newsList = item.newsList
+      this.infoSumList = swiperList[item].infoSumList
+      this.newsLists = swiperList[item].newLists
     }
   }
 }
@@ -72,6 +72,8 @@ export default {
     .carouselArea {
       height: 128px;
       background: transparent;
+      position:relative;
+      top:-15px;
     }
     .infoSumArea {
       display: flex;
