@@ -16,13 +16,18 @@
         <slide v-for="(slide, i) in picList" :index="i" :key="slide.id">
           <!-- <h1>{{ slide.title }}</h1>
       <p>{{ slide.desc }}</p> -->
-          <img v-if="i == 0" src="@/assets/img/imgcenter.jpg" alt="" />
-          <img v-if="i == 1" src="@/assets/img/img5.jpg" alt="" />
-          <img v-if="i == 2" src="@/assets/img/img7.jpg" alt="" />
+          <a :href="slide.link" v-if="i == 0" class="link"
+            ><img src="@/assets/img/imgcenter.jpg" alt=""
+          /></a>
+          <a :href="slide.link" v-if="i == 1" class="link">
+            <img src="@/assets/img/img5.jpg" alt=""
+          /></a>
+          <a :href="slide.link" v-if="i == 2" class="link">
+            <img src="@/assets/img/img7.jpg" alt=""
+          /></a>
         </slide>
       </carousel-3d>
     </div>
-    <img class="bg-img" src="@/assets/img/picswiperbottom.png" alt="" />
   </div>
 </template>
 
@@ -34,14 +39,17 @@ export default {
         {
           id: 1,
           url: "../../assets/img/imgcenter.jpg",
+          link: "https://www.ecnu.edu.cn/info/1095/58504.htm",
         },
         {
           id: 2,
           url: "@/assets/img/img5.jpg",
+          link: "https://www.ecnu.edu.cn/info/1095/58523.htm",
         },
         {
           id: 3,
           url: "../../assets/img/img6.jpg",
+          link: "https://www.ecnu.edu.cn/info/1095/58499.htm",
         },
       ],
     };
@@ -58,30 +66,31 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-// .box {
-//   background: url("../../assets/img/picswiperbottom.png") bottom center
-//     no-repeat;
-//   position: relative;
-//   top: -10px;
-// }
-.wrapper {
-  position: relative;
-}
 .box {
+  background: url("../../assets/img/picswiperbottom.png") bottom center
+    no-repeat;
   position: relative;
-  z-index: 100;
-  bottom: 10px;
+  top: -10px;
+  padding-bottom: 50px;
 }
-.bg-img {
-  width: 839px;
-  height: 82px;
-  display: block;
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  margin-left: -30%;
-  z-index: 1;
-}
+// .wrapper {
+//   position: relative;
+// }
+// .box {
+//   position: relative;
+//   z-index: 100;
+//   bottom: 10px;
+// }
+// .bg-img {
+//   width: 839px;
+//   height: 82px;
+//   display: block;
+//   position: absolute;
+//   bottom: -20px;
+//   left: 50%;
+//   margin-left: -30%;
+//   z-index: 1;
+// }
 .carousel-3d-slide {
   width: 588px !important;
   height: 332px !important;
