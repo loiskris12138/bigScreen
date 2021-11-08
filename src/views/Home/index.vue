@@ -1,7 +1,6 @@
 <template>
   <div class="bigScreen">
-    <Swiper />
-    <!-- <div class="header">
+    <div class="header">
       <span class="bigScreen-title">华东师范大学融媒体中心</span>
     </div>
     <div class="bigScreen-container">
@@ -25,33 +24,33 @@
         </div>
         <important-media />
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 <script>
-// import socialVideo from './socialVideo/index.vue'
-// import leftSocial from './leftSocial/index.vue'
-// import ownProduct from './ownProduct/index.vue'
-// import pratice from './practice'
-// import News from '@/components/News'
-// import MediaAttention from '@/components/MediaAttention'
-// import ImportantMedia from '@/components/ImportantMedia'
-// import countTo from 'vue-count-to'
+import socialVideo from './socialVideo/index.vue'
+import leftSocial from './leftSocial/index.vue'
+import ownProduct from './ownProduct/index.vue'
+import pratice from './practice'
+import News from '@/components/News'
+import MediaAttention from '@/components/MediaAttention'
+import ImportantMedia from '@/components/ImportantMedia'
+import countTo from 'vue-count-to'
 import { sumList } from './data'
-import Swiper from './leftSocial/swiper.vue'
+// import Swiper from './leftSocial/swiper.vue'
 export default {
   name: 'Home',
   components: {
-    // socialVideo,
-    // leftSocial,
-    // ownProduct,
-    // pratice,
-    // News,
-    // MediaAttention,
-    // ImportantMedia,
-    // countTo
+    socialVideo,
+    leftSocial,
+    ownProduct,
+    pratice,
+    News,
+    MediaAttention,
+    ImportantMedia,
+    countTo
     // Modal
-    Swiper
+    // Swiper
   },
   data() {
     return {
@@ -112,7 +111,7 @@ export default {
       width: 210px;
       height: 110px;
       margin: 0 30px;
-      background: url("../../assets/img/countbg.png");
+      background: url("../../assets/img/countbg.png") no-repeat;
       background-size:100% auto;
       display: flex;
       flex-direction: column;

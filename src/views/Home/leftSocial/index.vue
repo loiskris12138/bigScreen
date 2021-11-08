@@ -36,7 +36,7 @@
   </div>
 </template>
 <script>
-import { newsList, infoSumList } from '../data'
+import { swiperList } from '../data'
 import swiper from './swiper.vue'
 export default {
   name: 'LeftSocial',
@@ -45,8 +45,14 @@ export default {
   },
   data() {
     return {
-      newsList: newsList,
-      infoSumList: infoSumList
+      newsList: swiperList[2].newsList,
+      infoSumList: swiperList[2].infoSumList
+    }
+  },
+  methods: {
+    getActiveItem(item) {
+      this.infoSumList = item.infoSumList
+      this.newsList = item.newsList
     }
   }
 }
