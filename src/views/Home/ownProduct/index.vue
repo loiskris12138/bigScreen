@@ -13,7 +13,7 @@
         </p>
       </div>
       <div class="rightContent">
-        <div class="imgArea" />
+        <div class="imgArea" @click="handleWebSiteCick" />
         <div class="ownTab">
           <div class="ownTabContent">
             <span>校报</span>
@@ -21,28 +21,73 @@
             <span>App</span>
           </div>
         </div>
+        <div class="modal-wrapper">
+          <modal
+            v-show="showWebSiteModal"
+            title="官网"
+            @handleClose="handleCloseWebSiteModal"
+          />
+        </div>
       </div>
     </div>
     <div class="commonHeadLine">政务平台</div>
     <div class="govermentArea">
       <div v-for="(item, index) in goverList" :key="index">
         <p v-if="item.title" class="goverTitle">{{ item.title }}</p>
-        <div v-else class="goverItem">111</div>
+        <div v-else class="goverItem">
+          <img
+            class="app-pic"
+            @click="handleAppClick(item.type)"
+            src="@/assets/img/phonePic1.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div v-if="showAppModal" class="app-modal-wrapper">
+        <modal :title="title" @handleClose="handleCloseAppModal" />
       </div>
     </div>
   </div>
 </template>
 <script>
-import { ownProductList, goverList } from '../data'
+import { ownProductList, goverList } from "../data";
+import Modal from "@/components/Modal";
 export default {
-  name: 'OwnProduct',
+  name: "OwnProduct",
+  components: {
+    Modal,
+  },
   data() {
     return {
       ownProductList: ownProductList,
-      goverList: goverList
-    }
-  }
-}
+      goverList: goverList,
+      showWebSiteModal: false,
+      title: "",
+      showAppModal: false,
+    };
+  },
+  methods: {
+    handleWebSiteCick() {
+      // handleWebSiteCick.log("dddd");
+      // this.$emit("popModal");
+
+      this.showWebSiteModal = true;
+    },
+    handleAppClick(title) {
+      if (this.showAppModal) {
+        return;
+      }
+      this.title = title;
+      this.showAppModal = true;
+    },
+    handleCloseWebSiteModal() {
+      this.showWebSiteModal = false;
+    },
+    handleCloseAppModal() {
+      this.showAppModal = false;
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .productGover {
@@ -50,6 +95,7 @@ export default {
   height: 539px;
   border-radius: 12px;
   background: #223958;
+  position: relative;
 
   .ownProductArea {
     display: flex;
@@ -110,6 +156,7 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding: 0 24px;
+    position: relative;
 
     .goverTitle {
       width: 13px;
@@ -122,7 +169,28 @@ export default {
       background: #88748d;
       border: 6px solid #182940;
       border-radius: 4px;
+      .app-pic {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
     }
+    .app-modal-wrapper {
+      position: absolute;
+      width: 425px;
+      height: 712px;
+      z-index: 1200;
+      left: 100%;
+      bottom: 0%;
+    }
+  }
+  .modal-wrapper {
+    position: absolute;
+    z-index: 1000;
+    top: -55%;
+    left: 104%;
+    width: 1040px;
+    height: 712px;
   }
 }
 </style>

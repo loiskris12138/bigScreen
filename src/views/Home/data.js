@@ -182,18 +182,24 @@ export const goverList = [{
   title: '中国教育发布'
 },
 {
+type:"中国教育发布",
   appImgUrl: ''
 },
 {
+type:"中国教育发布",
+
   appImgUrl: ''
 },
 {
   title: '学习强国'
 },
 {
+type:"学习强国",
+
   appImgUrl: ''
 },
 {
+  type:'学习强国',
   appImgUrl: ''
 }
 ]

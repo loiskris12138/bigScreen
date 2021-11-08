@@ -1,6 +1,7 @@
 <template>
   <div class="media-attention">
-    <div class="title" />
+    <div class="commonHeadLine">媒体关注</div>
+
     <div class="content">
       <div class="charts">
         <pie-chart />
@@ -23,43 +24,44 @@
         </ul>
       </div>
       <div class="bottom-news-brand">
-        <li><img src="@/assets/img/news4.png" alt=""></li>
-        <li><img src="@/assets/img/news3.png" alt=""></li>
-        <li><img src="@/assets/img/renmin.png" alt=""></li>
-        <li><img src="@/assets/img/news1.png" alt=""></li>
-        <li><img src="@/assets/img/news2.png" alt=""></li>
+        <li><img src="@/assets/img/news4.png" alt="" /></li>
+        <li><img src="@/assets/img/news3.png" alt="" /></li>
+        <li><img src="@/assets/img/renmin.png" alt="" /></li>
+        <li><img src="@/assets/img/news1.png" alt="" /></li>
+        <li><img src="@/assets/img/news2.png" alt="" /></li>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Title from '@/components/common/Title.vue'
-import PieChart from './PieChart.vue'
-import { leftTag, rightTag } from './constant'
+import Title from "@/components/common/Title.vue";
+import PieChart from "./PieChart.vue";
+import { leftTag, rightTag } from "./constant";
 export default {
   components: {
     Title,
-    PieChart
+    PieChart,
   },
   data: () => {
     return {
       leftTag,
-      rightTag
-    }
+      rightTag,
+    };
   },
 
-  created: () => {}
-}
+  created: () => {},
+};
 </script>
 
 <style lang="scss" scoped>
 .media-attention {
   width: 655px;
-  //   height: 541px;
+  height: 541px;
   background: #223958;
   border-radius: 12px;
   padding: 20px;
+  margin-right: 20px;
   .title {
     width: 300px;
     height: 50px;
@@ -130,7 +132,6 @@ export default {
     }
   }
   .bottom-news-brand {
-    min-height: 200px;
     background: url("../../assets/img/mediabg.png") 50% 50% no-repeat;
     display: flex;
     justify-content: space-between;

@@ -13,6 +13,10 @@ export default {
     key() {
       return this.$route.path;
     },
+<<<<<<< HEAD
+=======
+    //
+>>>>>>> test
   },
 };
 </script>

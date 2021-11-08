@@ -21,6 +21,10 @@
       </div>
       <div class="newsArea">
         <div v-for="(item, index) in newsList" :key="index" class="newItem">
+          <a
+            href="https://www.ecnu.edu.cn/info/1095/58504.htm"
+            class="newshref"
+          />
           <p class="info">
             <span class="count">{{ item.count }}</span>
             <span class="title">{{ item.title }}</span>
@@ -33,12 +37,11 @@
 </template>
 <script>
 import { newsList, infoSumList } from '../data'
-// import swiper from './swiper.vue'
+// import circleSwiper from './circleSwiper.vue'
 export default {
   name: 'LeftSocial',
   components: {
-    // swiper
-
+    // circleSwiper
   },
   data() {
     return {
@@ -53,6 +56,8 @@ export default {
   width: 474px;
   height: 444px;
   background: #223958;
+  margin-bottom: 20px;
+  margin-right: 20px;
 
   border-radius: 12px;
   .leftSocialContent {
@@ -106,7 +111,15 @@ export default {
       }
     }
     .newsArea {
+      .newshref {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
       .newItem {
+        position: relative;
+
         width: 421px;
         height: 22px;
         box-sizing: border-box;
