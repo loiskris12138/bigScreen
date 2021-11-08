@@ -62,7 +62,7 @@ export default {
 
 <style lang="scss" scoped>
 .media-attention {
-  width: 730px;
+  width: 770px;
   height: 541px;
   background: #223958;
   border-radius: 12px;
@@ -88,6 +88,7 @@ export default {
     justify-content: left;
     align-items: center;
     .legend {
+      margin-left: 15px;
       .media {
         display: flex;
         justify-content: left;

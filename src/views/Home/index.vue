@@ -25,7 +25,7 @@
             <span class="num-label">{{ item.name }}</span>
           </li>
         </ul>
-        fsflsdjflsdfjlskfjlskfjlkdjfdjkefkjkjdksflkdsjfldsfjslkfjdlskfjklsdfjdlsfjdlsfjdlsjflsjfdsljflsj
+        <main-swiper />
       </div>
       <div class="right-bigscreen">
         <div class="right-top">
@@ -45,6 +45,7 @@ import pratice from "./practice";
 import News from "@/components/News";
 import MediaAttention from "@/components/MediaAttention";
 import ImportantMedia from "@/components/ImportantMedia";
+import MainSwiper from "@/components/MainSwiper";
 import countTo from "vue-count-to";
 import { sumList } from "./data";
 import PicSlider from "@/components/PicSlider";
@@ -61,6 +62,7 @@ export default {
     MediaAttention,
     ImportantMedia,
     countTo,
+    MainSwiper,
     // Modal
     // Swiper
   },
