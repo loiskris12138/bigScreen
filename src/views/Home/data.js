@@ -1,40 +1,50 @@
 export const mediaList = [{
+  id: 1,
   name: '抖音',
   imgUrl: require(`@/assets/img/socialVideo/app(1).png`)
 },
 {
+  id: 2,
   name: '微博',
   imgUrl: require(`@/assets/img/socialVideo/app(2).png`)
 },
 {
+  id: 3,
   name: '头条',
   imgUrl: require(`@/assets/img/socialVideo/app(3).png`)
 },
 {
+  id: 4,
   name: '微信',
   imgUrl: require(`@/assets/img/socialVideo/app(4).png`)
 },
 {
+  id: 5,
   name: 'bilibili',
   imgUrl: require(`@/assets/img/socialVideo/app(5).png`)
 },
 {
+  id: 6,
   name: '快手',
   imgUrl: require(`@/assets/img/socialVideo/app(6).png`)
 },
 {
+  id: 7,
   name: '央视频',
   imgUrl: require(`@/assets/img/socialVideo/app(1).png`)
 },
 {
+  id: 8,
   name: '视频号',
   imgUrl: require(`@/assets/img/socialVideo/app(2).png`)
 },
 {
+  id: 9,
   name: '喜马拉雅',
   imgUrl: require(`@/assets/img/socialVideo/app(3).png`)
 },
 {
+  id: 10,
   name: '网易云',
   imgUrl: require(`@/assets/img/socialVideo/app(4).png`)
 }

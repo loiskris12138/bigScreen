@@ -1,11 +1,12 @@
 <template>
   <div class="bigScreen">
+    <swiper />
     <!-- <leftSocial /><pratice /><socialVideo /><ownProduct /> -->
-    <div class="right-bigscreen">
+    <!-- <div class="right-bigscreen">
       <MediaAttention />
       <News />
-    </div>
-    <important-media />
+    </div> -->
+    <!-- <important-media /> -->
   </div>
 </template>
 <script>
@@ -13,28 +14,30 @@
 // import leftSocial from './leftSocial/index.vue'
 // import ownProduct from './ownProduct/index.vue'
 // import pratice from './practice'
-import News from '@/components/News'
-import MediaAttention from '@/components/MediaAttention'
-import ImportantMedia from '@/components/ImportantMedia'
+// import circleSwiper from '../Home/leftSocial/circleSwiper.vue'
+// import News from '@/components/News'
+// import MediaAttention from '@/components/MediaAttention'
+// import ImportantMedia from '@/components/ImportantMedia'
+import swiper from '../Home/leftSocial/swiper.vue'
 export default {
   name: 'Home',
   components: {
+    swiper
+    // circleSwiper
     // socialVideo,
     // leftSocial,
     // ownProduct,
     // pratice,
-    News,
-    MediaAttention,
-    ImportantMedia
+    // News,
+    // MediaAttention,
+    // ImportantMedia
   },
   computed: {}
 }
 </script>
 <style lang="scss" scoped>
 .bigScreen {
-  background: red;
-  width: 100px;
-  height: 100px;
+
 }
 .right-bigscreen {
   display: flex;

@@ -58,24 +58,18 @@ export default {
     return {
       swiperOption: {
         loop: true,
-        effect: 'coverflow', // 默认为"slide"（普通位移切换），还可设置为"fade"（淡入）、"cube"（方块）、"coverflow"（3d流）、"flip"（3d翻转）、"cards"(卡片式)、"creative"（创意性）。
-        // grabCursor: true,
-        slidesPerView: 7,
+        effect: 'coverflow',
+        grabCursor: true,
         centeredSlides: true,
-
+        slidesPerView: '9',
         coverflowEffect: {
-
-          rotate: 50, // slide做3d旋转时Y轴的旋转角度。默认50。
+          rotate: 0,
           stretch: 0,
-          depth: 100,
+          depth: 500,
           modifier: 1,
           slideShadows: true
-          // rotate: 30, // slide做3d旋转时Y轴的旋转角度。默认50。
-          // stretch: 200, // 每个slide之间的拉伸值，越大slide靠得越紧。 默认0。
-          // depth: 60, // slide的位置深度。值越大z轴距离越远，看起来越小。 默认100。
-          // modifier: 2.5, // depth和rotate和stretch的倍率，相当于depth*modifier、rotate*modifier、stretch*modifier，值越大这三个参数的效果越明显。默认1。
-          // slideShadows: true // 开启slide阴影。默认 true。
         },
+
         // autoplay: {
         //   // delay: 3000, // 自动切换的时间间隔，单位ms
         //   stopOnLastSlide: false, // 当切换到最后一个slide时停止自动切换
