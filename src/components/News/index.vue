@@ -3,9 +3,9 @@
     <div class="up-block">
       <ul>
         <li v-for="(i, ind) in upList" :key="i.id">
-          <a href="https://www.ecnu.edu.cn/info/1095/58504.htm">
+          <a :href="i.link">
             <div class="content">
-              <img class="image" src="@/assets/img/newimg.jpg" alt="" />
+              <img class="image" :src="i.url" alt="">
               <div class="desc">
                 <div class="desc-up">
                   <span class="title">{{ i.title }}</span>
@@ -22,15 +22,15 @@
     <div class="down-block">
       <ul>
         <li v-for="(i, ind) in downList" :key="i.id">
-          <a href="https://www.ecnu.edu.cn/info/1095/58504.htm">
+          <a :href="i.link">
             <div class="content">
-              <img class="image" src="@/assets/img/newimg.jpg" alt="" />
+              <img class="image" :src="i.url" alt="">
               <div class="desc">
                 <div class="desc-up">
-                  <span class="title">《800架无人机编队飞行在苍穹之下》</span>
-                  <span class="read-times">阅读数118.9w</span>
+                  <span class="title">{{ i.title }}</span>
+                  <span class="read-times">阅读数{{ i.readingcount }}</span>
                 </div>
-                <p class="date">2021年03月9日</p>
+                <p class="date">{{ i.date }}</p>
               </div>
             </div>
           </a>
@@ -42,15 +42,15 @@
 </template>
 
 <script>
-import { upList, downList } from "./constant";
+import { upList, downList } from './constant'
 export default {
   data() {
     return {
       upList,
-      downList,
-    };
-  },
-};
+      downList
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

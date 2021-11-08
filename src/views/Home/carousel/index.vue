@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carousel-3d :autopaly="true" :perspective="0" :display="9" :loop="false" :animation-speed="2000" :width="setWidth" :height="setHeight" :space="setSpace" inverse-scaling="200" :clickable="false">
+    <carousel-3d :autoplay="true" :perspective="0" :display="9" :loop="false" :animation-speed="2000" :width="setWidth" :height="setHeight" :space="setSpace" inverse-scaling="200" :clickable="false">
       <slide v-for="(slide, i) in carouselList" :key="i" :index="i">
         <img :src="slide.imgUrl" alt="" class="imgStyle">
       </slide>

@@ -24,17 +24,17 @@
         </ul>
       </div>
       <div class="bottom-news-brand">
-        <li><img class="image" src="@/assets/img/news4.png" alt="" /></li>
-        <li><img class="image" src="@/assets/img/news3.png" alt="" /></li>
+        <li><img class="image" src="@/assets/img/news4.png" alt=""></li>
+        <li><img class="image" src="@/assets/img/news3.png" alt=""></li>
         <li>
           <img
             class="image image-center"
             src="@/assets/img/renmin.png"
             alt=""
-          />
+          >
         </li>
-        <li><img class="image" src="@/assets/img/news1.png" alt="" /></li>
-        <li><img class="image" src="@/assets/img/news2.png" alt="" /></li>
+        <li><img class="image" src="@/assets/img/news1.png" alt=""></li>
+        <li><img class="image" src="@/assets/img/news2.png" alt=""></li>
       </div>
     </div>
   </div>
@@ -42,27 +42,27 @@
 
 <script>
 // import Title from '@/components/common/Title.vue'
-import PieChart from "./PieChart.vue";
-import { leftTag, rightTag } from "./constant";
+import PieChart from './PieChart.vue'
+import { leftTag, rightTag } from './constant'
 export default {
   components: {
     // Title,
-    PieChart,
+    PieChart
   },
   data: () => {
     return {
       leftTag,
-      rightTag,
-    };
+      rightTag
+    }
   },
 
-  created: () => {},
-};
+  created: () => {}
+}
 </script>
 
 <style lang="scss" scoped>
 .media-attention {
-  width: 730px;
+  width: 770px;
   height: 541px;
   background: #223958;
   border-radius: 12px;
@@ -88,6 +88,7 @@ export default {
     justify-content: left;
     align-items: center;
     .legend {
+      margin-left: 15px;
       .media {
         display: flex;
         justify-content: left;

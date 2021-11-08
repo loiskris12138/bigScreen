@@ -1,3 +1,9 @@
+const fontSet = (val) => {
+  const htmlWidth =
+    document.documentElement.clientWidth || document.body.clientWidth
+  console.log(Math.round((htmlWidth / 1920) * val))
+  return Math.round((htmlWidth / 1920) * val)
+}
 export const settingOption = (title) => {
   return {
 
@@ -7,7 +13,7 @@ export const settingOption = (title) => {
       textAlign: 'center',
       left: '49%',
       textStyle: {
-        fontSize: 20,
+        fontSize: fontSet(20),
         // font-f÷amily: Microsoft YaHei;
         fontWeight: 400,
         color: '#3289FC'
@@ -29,8 +35,8 @@ export const settingOption = (title) => {
           formatter: '{per|{d}%}{san|}',
           rich: {
             per: {
-              width: 40,
-              height: 40
+              width: fontSet(55),
+              height: fontSet(55)
             }
           }
         },
@@ -40,8 +46,8 @@ export const settingOption = (title) => {
         },
         color: ['#f4b19c', '#338afb'],
         data: [
-          { value: 1048, name: 'Search Engine', label: { backgroundColor: '#f4b19c', borderRadius: 25, color: '#fff' }},
-          { value: 735, name: 'Direct', label: { backgroundColor: '#338afb', borderRadius: 25, color: '#fff' }}
+          { value: 1048, name: 'Search Engine', label: { backgroundColor: '#f4b19c', borderRadius: 25, color: '#fff', fontSize: fontSet(16) }},
+          { value: 735, name: 'Direct', label: { backgroundColor: '#338afb', borderRadius: 25, color: '#fff', fontSize: fontSet(16) }}
 
         ]
       }

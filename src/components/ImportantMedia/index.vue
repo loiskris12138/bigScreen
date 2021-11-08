@@ -20,7 +20,7 @@ export default {
 
 <style lang="scss" scoped>
 .important-media {
-  width: 1247px;
+  width: 1287px;
   height: 441px;
   background: #223958;
   border-radius: 12px;
