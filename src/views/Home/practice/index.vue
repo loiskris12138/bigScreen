@@ -1,8 +1,10 @@
 <template>
-  <div class="praticeArea setMargin">
+  <div class="praticeArea setMargin" @click="redirectDetail">
     <div class="commonHeadLine">融媒实践</div>
     <div class="praticeContent">
-      <div class="imgArea" />
+      <div class="imgArea">
+        <img src="@/assets/img/pratice.jpg" alt="">
+      </div>
 
       <div v-for="(item, index) in praticeList" :key="index" class="newInfo">
         <p class="newTitle">
@@ -22,11 +24,18 @@ export default {
     return {
       praticeList: praticeList
     }
+  },
+  methods: {
+    redirectDetail() {
+      window.open('https://www.ecnu.edu.cn/info/1095/58504.htm', '_blank')
+    }
+
   }
 }
 </script>
 <style lang="scss" scoped>
 .praticeArea {
+  cursor: pointer;
   box-sizing: border-box;
   width: 680px;
   height: 244px;
@@ -45,6 +54,12 @@ export default {
       height: 157px;
       border-radius: 16px;
       background: rgb(223, 193, 193);
+      img{
+        width: 318px;
+        height: 157px;
+        border-radius: 16px;
+
+      }
     }
     .newInfo {
       margin-top: 22px;
@@ -55,6 +70,7 @@ export default {
         font-weight: 400;
         color: #ffffff;
         line-height: 25px;
+        overflow:hidden;
       }
       .splitLine {
         width: 204px;
@@ -69,6 +85,7 @@ export default {
         color: #658bbe;
         line-height: 21px;
         text-indent: 2em;
+        overflow:hidden;
       }
     }
   }

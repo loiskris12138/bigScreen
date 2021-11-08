@@ -708,42 +708,62 @@ export const friendsList = [{
 
 ]
 
-export const ownProductList = [{
-  name: '动态banner',
-  color: '#6E96CC',
-  bgColor: '#2E4A7B'
+export const tabList = [{
+  id: 0,
+  tab: '官网',
+  ownProductList: [
+    {
+      name: '动态banner',
+      color: '#6E96CC',
+      bgColor: '#2E4A7B'
+    },
+    {
+      name: '校史展示',
+      color: '#FFFFFF',
+      bgColor: '#FAB08E'
+    },
+    {
+      name: '内容聚合',
+      color: '#FFFFFF',
+      bgColor: '#3287FE'
+    },
+    {
+      name: '校庆专题页',
+      color: '#FFFFFF',
+      bgColor: '#3287FE'
+    }
+  ]
 },
 {
-  name: '全景资讯',
-  color: '#FFFFFF',
-  bgColor: '#FAB08E'
-},
-{
-  name: '校史展示',
-  color: '#FFFFFF',
-  bgColor: '#FAB08E'
-},
-{
-  name: '技术赋能',
-  color: '#6E96CC',
-  bgColor: '#2E4A7B'
-},
-{
-  name: '内容聚合',
-  color: '#FFFFFF',
-  bgColor: '#3287FE'
-},
-{
-  name: '智慧校园',
-  color: '#6E96CC',
-  bgColor: '#2E4A7B'
-},
-{
-  name: '校庆专题页',
-  color: '#FFFFFF',
-  bgColor: '#3287FE'
-}
-]
+  id: 1,
+  tab: '校报',
+  ownProductList: [
+
+  ]
+}, {
+  id: 2,
+  tab: 'APP',
+  ownProductList: [
+    {
+      name: '全景资讯',
+      color: '#FFFFFF',
+      bgColor: '#FAB08E'
+    },
+
+    {
+      name: '技术赋能',
+      color: '#6E96CC',
+      bgColor: '#2E4A7B'
+    },
+
+    {
+      name: '智慧校园',
+      color: '#6E96CC',
+      bgColor: '#2E4A7B'
+    }
+  ]
+}]
+
 export const goverList = [{
   title: '中国教育发布'
 },
@@ -773,8 +793,8 @@ export const goverList = [{
 }
 ]
 export const praticeList = [{
-  title: '校园文化,综合类融媒实践',
-  content: '“芳信东来，山河无恙”2020 春季赏花云直播'
+  title: '媒体关注丨复原咖啡馆中《共产党宣言》的创作场景 丽娃河畔举行咖啡文化节',
+  content: '在丽娃河畔的咖啡馆中，复原比利时布鲁塞尔中央广场的天鹅咖啡馆中《共产党宣言》的创作场景，让今天的大学师生身临其境般体验一百多年前《共产党宣言》诞生的伟大历史时刻'
 }]
 // export const trendChartList = [{
 //   name: '阅读数趋势',

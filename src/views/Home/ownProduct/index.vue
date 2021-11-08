@@ -16,9 +16,9 @@
         <div class="imgArea" @click="handleWebSiteCick" />
         <div class="ownTab">
           <div class="ownTabContent">
-            <span>校报</span>
-            <span class="activeTab">官网</span>
-            <span>App</span>
+            <span v-for="item in tabList" :key="item.id" :class="{'activeTab':activeTab===item.id}" @click="changeActiveTab(item.id)">{{ item.tab }}</span>
+            <!-- <span class="activeTab">官网</span>
+            <span>App</span> -->
           </div>
         </div>
         <div v-show="showWebSiteModal" class="modal-wrapper webFrame">
@@ -50,7 +50,7 @@
   </div>
 </template>
 <script>
-import { ownProductList, goverList } from '../data'
+import { tabList, goverList } from '../data'
 import Modal from '@/components/Modal'
 export default {
   name: 'OwnProduct',
@@ -59,15 +59,24 @@ export default {
   },
   data() {
     return {
-      ownProductList: ownProductList,
       goverList: goverList,
       showWebSiteModal: false,
       title: '',
       showAppModal: false,
-      appId: 0
+      appId: 0,
+      tabList: tabList,
+      activeTab: 0,
+      ownProductList: tabList[0].ownProductList
     }
   },
+  created() {
+    console.error(this.tabList)
+  },
   methods: {
+    changeActiveTab(id) {
+      this.activeTab = id
+      this.ownProductList = tabList[id].ownProductList
+    },
     handleWebSiteCick() {
       // handleWebSiteCick.log("dddd");
       // this.$emit("popModal");
@@ -143,13 +152,19 @@ export default {
           margin-top: 8px;
           span {
             cursor: pointer;
+            margin:0px 15px;
+            &:nth-child(1){
+              margin-left:0px;
+            }
+                  &:last-child{
+              margin-right:0px;
+            }
           }
         }
         .activeTab {
           font-size: 24px;
           font-weight: bold;
           color: #ffffff;
-          margin: 0px 30px;
           padding-bottom: 6px;
           border-bottom: 2px solid #30d5f9;
         }
